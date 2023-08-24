@@ -7,4 +7,6 @@
   overflow: scroll;
   background: #ededed;
   box-sizing: border-box;
+  max-width: 720rpx;
+  margin: 0 auto;
 } 
