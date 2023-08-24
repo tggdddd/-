@@ -1,0 +1,210 @@
+<view class="container">
+  <view class="header">
+    <view class="header-left">
+      <view class="header-item">
+        <view class="img-icon icon-back" bind:tap="back"></view>
+      </view>
+    </view>
+    <view class="header-middle">
+      <view class="header-title">问题详情</view>
+    </view>
+    <view class="header-right"></view>
+  </view>
+  <view class="body">
+
+    <view class="body-header">
+      <view class="img-box">
+        <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b3553083a4975325eab6470d94465548.jpg" mode="scaleToFill" />
+      </view>
+      <view class="title">Xiaomi 10S</view>
+    </view>
+    <view class="question-list">
+      <view class="title">现在买米10s 还是买k40 哪个好 推荐一下
+      </view>
+      <view class="author-layout">
+        <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/p01mUcqSeNgx/xnYwLXfigcg3dr.jpg?thumb=150x150" mode="scaleToFill" />
+        <view class="tips">
+          <view class="name">京城 &</view>
+          <view class="time"> 提问于2021-10-26 01:04</view>
+        </view>
+        <view class="follow-btn">关注问题</view>
+      </view>
+    </view>
+    <scroll-view scroll-y class="answer-list">
+      <view class="answer-title">
+        <view class="total"> 共 1563 条讨论</view>
+        <view class="switch">
+          <view class="btn active">热门</view>
+          <view class="btn">最新</view>
+        </view>
+      </view>
+      <view class="list-container">
+        <view class="show-answer-list layout">
+          <view class="user-info">
+            <view class="user-profile">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/373a7271-93fd-47f4-a21e-4202f80568e4.jpg?thumb=150x150" mode="widthFix" lazy-load />
+            </view>
+          </view>
+          <view class="right-box">
+            <view class="name">
+              G.M
+              <text class="time"> 2021-10-26</text>
+            </view>
+            <view class="context">做办公室10s,干活就k40，这是主要选择，曲屏不适合干活人。k40.要买就12+256，双11预定2300，你要有些红包还能便宜些</view>
+            <view class="handler">
+              <text>1008</text>
+              <view class="icon icon-good"></view>
+            </view>
+            <view class="reply-list">
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">1186***221</text>
+                  <text> 回复</text> <text class="reply-name">贵州小溪 :</text>
+                  <text> 对的</text>
+                </view>
+                <view><text class="reply-name">内蒙古  </text></view>
+              </view>
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">感谢经历 :</text>
+                  <text> 对对对</text>
+                </view>
+                <view><text class="reply-name">广东  </text></view>
+              </view>
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">王洋 :</text>
+                  <text> 好！好👌</text>
+                </view>
+                <view><text class="reply-name">河北  </text></view>
+              </view>
+              <view class="reply-more">
+                <text>展开 19 条回复</text>
+                <view class="icon icon-down"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="show-answer-list layout">
+          <view class="user-info">
+            <view class="user-profile">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/373a7271-93fd-47f4-a21e-4202f80568e4.jpg?thumb=150x150" mode="widthFix" lazy-load />
+            </view>
+          </view>
+          <view class="right-box">
+            <view class="name">
+              G.M
+              <text class="time"> 2021-10-26</text>
+            </view>
+            <view class="context">做办公室10s,干活就k40，这是主要选择，曲屏不适合干活人。k40.要买就12+256，双11预定2300，你要有些红包还能便宜些</view>
+            <view class="handler">
+              <text>1008</text>
+              <view class="icon icon-good"></view>
+            </view>
+            <view class="reply-list">
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">1186***221</text>
+                  <text> 回复</text> <text class="reply-name">贵州小溪 :</text>
+                  <text> 对的</text>
+                </view>
+                <view><text class="reply-name">内蒙古  </text></view>
+              </view>
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">感谢经历 :</text>
+                  <text> 对对对</text>
+                </view>
+                <view><text class="reply-name">广东  </text></view>
+              </view>
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">王洋 :</text>
+                  <text> 好！好👌</text>
+                </view>
+                <view><text class="reply-name">河北  </text></view>
+              </view>
+              <view class="reply-more">
+                <text>展开 19 条回复</text>
+                <view class="icon icon-down"></view>
+              </view>
+            </view>
+          </view>
+        </view> <view class="show-answer-list layout">
+          <view class="user-info">
+            <view class="user-profile">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/373a7271-93fd-47f4-a21e-4202f80568e4.jpg?thumb=150x150" mode="widthFix" lazy-load />
+            </view>
+          </view>
+          <view class="right-box">
+            <view class="name">
+              G.M
+              <text class="time"> 2021-10-26</text>
+            </view>
+            <view class="context">做办公室10s,干活就k40，这是主要选择，曲屏不适合干活人。k40.要买就12+256，双11预定2300，你要有些红包还能便宜些</view>
+            <view class="handler">
+              <text>1008</text>
+              <view class="icon icon-good"></view>
+            </view>
+            <view class="reply-list">
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">1186***221</text>
+                  <text> 回复</text> <text class="reply-name">贵州小溪 :</text>
+                  <text> 对的</text>
+                </view>
+                <view><text class="reply-name">内蒙古  </text></view>
+              </view>
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">感谢经历 :</text>
+                  <text> 对对对</text>
+                </view>
+                <view><text class="reply-name">广东  </text></view>
+              </view>
+              <view class="reply-item">
+                <view>
+                  <text class="reply-name">王洋 :</text>
+                  <text> 好！好👌</text>
+                </view>
+                <view><text class="reply-name">河北  </text></view>
+              </view>
+              <view class="reply-more">
+                <text>展开 19 条回复</text>
+                <view class="icon icon-down"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+
+
+
+      </view>
+    </scroll-view>
+    <view class="bottom-action">
+      <view class="bottom-action-left">
+        <view class="bottom-action-btn ">
+          <view class="icon icon-edit"></view>
+          <text>一起讨论吧</text>
+        </view>
+      </view>
+      <view class="bottom-action-right">
+        <view class="bottom-action-ctrl">
+          <view class="action-icon">
+            <view class="icon icon-share"></view>
+          </view>
+          <view class="action-icon">
+            <view class="icon icon-good"></view><text>229515</text>
+          </view>
+        </view>
+
+
+      </view>
+
+
+    </view>
+  </view>
+</view>

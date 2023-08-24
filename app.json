@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/star/star",
+    "pages/star/pages/questionDetail/questionDetail",
     "pages/category/category",
     "pages/index/index",
     "pages/test3/test3",
