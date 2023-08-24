@@ -52,8 +52,8 @@
           </view>
         </view>
       </view>
-      <!--  -->
-      <view class="card">
+      <!-- normal -->
+      <view class="card" bind:tap="toDetail" data-type="buyersShow">
         <view class="user">
           <view class="user-avatar">
             <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />

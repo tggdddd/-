@@ -1,0 +1,234 @@
+.header {
+  margin: 0 auto;
+  max-width: 720rpx;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f5f5f5;
+  color: #666;
+  padding: 0;
+  transition: transform .2s ease-out;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+
+  .header-middle {
+    flex: 1;
+    font-size: 30rpx;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+
+    .header-title {
+      text-align: center;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: rgb(102, 102, 102);
+    }
+  }
+
+  .header-left,
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    .header-item {
+      display: block;
+      width: 60rpx;
+      margin: 0 20rpx;
+
+      .img-icon {
+        width: 50rpx;
+        height: 50rpx;
+        line-height: 60rpx;
+      }
+    }
+  }
+
+  .header-right {
+    min-width: 100rpx;
+  }
+}
+
+.body {
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  overflow: hidden;
+  height: calc(100vh - 150rpx);
+  max-width: 720rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+
+  .device {
+    margin: 0 -24rpx;
+    padding: 13rpx 10rpx;
+    text-align: left;
+    border-bottom: 3rpx solid #f5f5f5;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    .device-img {
+      margin-right: 16rpx;
+      width: 60rpx;
+      height: 60rpx;
+    }
+
+    .device-name {
+      flex: 1;
+      font-size: 26rpx;
+      line-height: 1;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+
+    }
+
+    .device-hot {
+      font-size: 24rpx;
+      line-height: 1;
+      color: #999;
+    }
+
+    .arrow {
+      width: 40rpx;
+      height: 40rpx;
+    }
+  }
+
+  .card {
+    box-sizing: border-box;
+    margin-bottom: 40rpx;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1rpx;
+    border-bottom: 1rpx solid #f5f5f5;
+  }
+}
+
+.block {
+  display: block !important;
+}
+
+.height-auto {
+  height: auto !important;
+}
+
+.comments {
+  margin-bottom: 20rpx;
+  text-align: left;
+
+  .comments-num {
+    margin-bottom: 28rpx;
+    color: #333;
+    font-size: 24rpx;
+  }
+
+  .comments-user {
+    margin-bottom: 40rpx;
+    display: flex;
+
+    .comments-user-avatar {
+      margin-right: 24rpx;
+      width: 52rpx;
+      height: 52rpx;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .comments-user-input {
+      flex: 1;
+      padding: 0 24rpx;
+      height: 52rpx;
+      line-height: 52rpx;
+      background: #f6f6f6;
+      border-radius: 26rpx;
+      font-size: 24rpx;
+      color: #999;
+
+    }
+  }
+
+  .comments-list {
+    .comment {
+      display: flex;
+      align-items: flex-start;
+      text-align: left;
+      padding-bottom: 20rpx;
+
+      .comment-avatar {
+        margin-right: 24rpx;
+        width: 52rpx;
+        height: 52rpx;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .comment-content {
+        padding-bottom: 14rpx;
+        border-bottom: 1rpx solid #f5f5f5;
+
+        .comment-info {
+          display: flex;
+          align-items: flex-start;
+
+          .comment-info-l {
+            flex: 1;
+
+            .comment-user {
+              font-size: 24rpx;
+              color: #999;
+
+              .name {}
+
+              .time {
+                margin-left: 10rpx;
+              }
+            }
+
+            .comment-text {
+              margin-top: 6rpx;
+              font-size: 26rpx;
+              color: #333;
+              line-height: 1.6;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+            }
+          }
+        }
+      }
+    }
+
+
+
+  }
+
+  .comments-more {
+    margin: 30rpx 0;
+    color: #999;
+    font-size: 24rpx;
+    text-align: center;
+
+    .icon {
+      margin-left: 6rpx;
+      width: 24rpx;
+      height: 24rpx;
+      display: inline-block;
+      transform: translateY(20%);
+    }
+  }
+}

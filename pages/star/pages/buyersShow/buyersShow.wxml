@@ -1,0 +1,113 @@
+<view class="container">
+  <view class="header">
+    <view class="header-left">
+      <view bind:tap="goBack" class="header-item">
+        <view class="img-icon icon-back" bind:tap="back"></view>
+      </view>
+    </view>
+    <view class="header-middle">
+      <view class="header-title">买家秀详情</view>
+    </view>
+    <view class="header-right">
+      <view class="header-item">
+        <view class="img-icon icon-ellipsis"></view>
+      </view>
+    </view>
+  </view>
+  <scroll-view scroll-y class="body">
+    <view class="device">
+      <image mode="scaleToFill" class="device-img" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68f494d205bd32a34728d0eb0f0ae81b.png?w=800&h=800"></image>
+      <view class="device-name">小米立式风冷无线充 30W</view>
+      <view class="device-hot">10w热度</view>
+      <view class="arrow icon-go"></view>
+    </view>
+
+    <view class="card">
+      <view class="user">
+        <view class="user-avatar">
+          <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />
+        </view>
+        <view class="user-info">
+          <view class="user-info-name">卡迪拉</view>
+          <view class="user-info-other">
+            <text class="time">2021-03-28 10:30</text>
+          </view>
+        </view>
+        <view class="user-focus">关注</view>
+      </view>
+      <view class="card-content">
+        <view class="normal">
+          <view class="content block">
+            第2批买小米10S没有送，昨天评价完了以后,突然看到账户里有一张优惠券，闲着无聊就点开看了一下是什么优惠券，一看居然可以以0.01元的价格购入这个30瓦的充电器，一阵狂喜，本来还想去翻车鱼上购买一个无奈那边传家宝太多，后来就想想还是算了，没想到这一次白送一个。充电很快，说个不足，手机不能横着充，只能竖着充。
+          </view>
+          <view class="images height-auto">
+            <view class="image">
+              <image src="https://i1.mifile.cn/a2/1616898656_3062251_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+            </view>
+            <view class="image">
+              <image src="https://i1.mifile.cn/a2/1616898656_1049447_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+            </view>
+            <view class="image">
+              <image src="https://i1.mifile.cn/a2/1616898655_1237771_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="comments">
+      <view class="comments-num">共564条评论</view>
+      <view class="comments-user">
+        <image src="https://i8.mifile.cn/b2c-mimall-media/fa83661ee38a1495b26a59e73ae15eb3.png" mode="scaleToFill" class="comments-user-avatar" />
+        <input class="comments-user-input" placeholder="来说点什么" />
+      </view>
+      <view class="comments-list">
+        <view wx:for="{{10}}" class="comment">
+          <image class="comment-avatar" src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/p01dGwBV1TIJ/8wslLnJWP5bTOL.jpg" mode="scaleToFill" />
+          <view class="comment-content">
+            <view class="comment-info">
+              <view class="comment-info-l">
+                <view class="comment-user"><text class="name">呵呵</text><text class="time">08-13 12:00</text>
+                </view>
+                <view class="comment-text">6666</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="comments-more">
+        <text class="text">查看全部564条评论</text>
+        <view class="icon icon-down">
+        </view>
+      </view>
+      <view style="height: 1rpx;"></view>
+    </view>
+    <view class="bottom-action">
+      <view class="bottom-action-left">
+        <view class="bottom-action-btn  buy-btn">
+            ￥99起 立即购买
+            <span class="icon icon-right"></span>
+       
+        </view>
+      </view>
+      <view class="bottom-action-right">
+        <view class="bottom-action-ctrl">
+          <view class="action-icon">
+            <view class="icon icon-share"></view>
+          </view>
+          <view class="action-icon">
+            <view class="icon icon-message"></view>
+            <text>564</text>
+          </view>
+          <view class="action-icon">
+            <view class="icon icon-good"></view><text>22</text>
+          </view>
+        </view>
+
+
+      </view>
+
+
+    </view>
+
+  </scroll-view>
+</view>

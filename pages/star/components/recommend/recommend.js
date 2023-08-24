@@ -29,6 +29,12 @@ Component({
             wx.navigateTo({
               url: '/pages/star/pages/questionDetail/questionDetail',
             })
+            break;
+            case "buyersShow":
+              wx.navigateTo({
+                url: '/pages/star/pages/buyersShow/buyersShow',
+              })
+              break;
         }
       }
   }

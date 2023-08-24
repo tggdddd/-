@@ -11,7 +11,6 @@
     <view class="header-right"></view>
   </view>
   <view class="body">
-
     <view class="body-header">
       <view class="img-box">
         <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b3553083a4975325eab6470d94465548.jpg" mode="scaleToFill" />
