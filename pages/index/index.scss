@@ -1,0 +1,400 @@
+.container {
+  .body {
+    width: 720rpx;
+    position: absolute;
+    top: 139rpx;
+    height: calc(100vh - 139rpx);
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    background: #fff;
+    transition: transform .4s cubic-bezier(.55, 0, .1, 1);
+  
+    .body1 {
+      height: 100%;
+      swiper {
+        position: relative;
+      }
+  
+      swiper,
+      swiper-item {
+        height: 360rpx;
+        width: 720rpx;
+  
+        image {
+          display: block;
+          width: 100%;
+          height: 100%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+        }
+      }
+  
+      .sorts {
+        width: 720rpx;
+        height: 152rpx;
+  
+  
+        image {
+          width: 144rpx;
+          height: 152rpx;
+        }
+      }
+    }
+  
+    .sort {
+      width: 720rpx;
+      height: 152rpx;
+  
+      image {
+        width: 144rpx;
+        height: 152rpx;
+      }
+    }
+  
+    .divide-line {
+      margin: 0 auto;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      box-sizing: border-box;
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    // i2
+    .i2 {
+      image {
+        height: 440rpx;
+        width: 720rpx;
+      }
+    }
+  
+    // i3
+    .i3 {
+      background: rgb(255, 255, 255);
+      padding: 0 12rpx;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      box-sizing: border-box;
+      .i3-item {
+        width: 340rpx;
+        flex: 1 1 auto;
+        box-sizing: border-box;
+        &:first-child {
+          margin-right: 12rpx;
+        }
+  
+        image {
+          width: 344rpx;
+          height: 280rpx;
+  
+        }
+  
+        .info {
+          padding: 20rpx 27rpx;
+          background-color: #fff;
+          box-sizing: border-box;
+  
+          .name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 28rpx;
+            color: rgba(0, 0, 0, .87);
+          }
+  
+          .brief {
+            margin-top: 6rpx;
+            font-size: 22rpx;
+            line-height: 30rpx;
+            color: rgba(0, 0, 0, .54);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+  
+          .price {
+            font-size: 28rpx;
+            color: #ea625b;
+            height: 1.5em;
+            line-height: 1.5em;
+            position: relative;
+            display: inline-block;
+            padding-left: 0.5em;
+  
+            box-sizing: border-box;
+            &::before {
+              content: "\A5";
+              position: absolute;
+              left: 0;
+              top: 0;
+              font-size: .76em;
+              text-decoration: none;
+  
+            }
+  
+            text {
+              display: inline-block;
+              margin-left: 4rpx;
+              font-size: 20rpx;
+            }
+          }
+  
+          .buybtn {
+            margin: 0 auto;
+            width: 200rpx;
+            background: #ea625b;
+            border-radius: 5rpx;
+            text-align: center;
+            color: #fff;
+            font-size: 24rpx;
+            padding: 16rpx 0;
+            font-weight: 700;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  
+    // body1 end
+  }
+  
+  // body end
+    max-width: 720rpx;
+    margin: 0 auto;
+    position: relative;
+  // 头
+  .header {
+    position: fixed;
+    top: -1rpx;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 2rpx 4rpx -1rpx rgb(0 0 0 / 20%);
+    background: #f2f2f2;
+    margin: 0 auto;
+    max-width: 720rpx;
+    // 搜索
+    .bar {
+      width: 720rpx;
+      height: 84rpx;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f2f2f2;
+      color: #666;
+
+      .content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid #e5e5e5;
+        text-align: left;
+        width: 100%;
+        color: rgba(0, 0, 0, .3);
+        background-color: #fff;
+        border-radius: 4rpx;
+        box-sizing: border-box;
+
+        .icon-box {
+          width: 60rpx;
+          height: 60rpx;
+          padding: 10rpx;
+          box-sizing: border-box;
+
+          .icon {
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAQAAAD/5HvMAAAEx0lEQVQYGe3Bf0yUdRwH8I9GpBtZVpul0y1/ZD8sKzdXbupMh3Pq0jWtzbVs9YfL8scfLq02h1m52R3c832+z/d5HrjjAOH4KQhy4MQD4eS4gXiCePLjBIwU8VeCOAPy3dZf/mEpz56zW93rRRQVFRUVFfU/dGFM+UTHlOrXzq/yf9HwefeS0plpk4/F0b+je5x/UZXIPZV+URmRwMEhQfs940K+ry6hYTY9Wu0Tyze6yxVYwSGgQoUKFSpUCMiwwH6zPLVqZVcsPRrlSwvqVVghwMGhQYMOHTp0aNDAIcBhhQ53UcWLFH4127QrElQwqEi7keUu21W/vnl5+/y2dwKraj8p3pdZ7bzDIYNDQmqweQWFU/cTpU4GAQUMro6SbR2z6D4aFuRb0m4yqFCgDXq3U7hciynOSYQOBertgr2np9I/ODHPlSlDg4AN3m8oPKq+t0GHguSexg/ogepjPbvZkIACbci3lsx3Yr06rECGvSO4gB6SbxMb5pBhDwZeInN1vWJvY5DB+5uX0ShUfmeDAhtKCkOxZCZPogUCMo5vpFEJxRSkcKiQ0BBP5gnMSu+RIaGokEatc2ZqSEBCqasnhszi32SFgBYKLiQDqnfI0CAGz79B5uibkOOVIZCXTob0TrK3qeA4tpfM0TmPQYO427CBDHLrDAoO+H+LITM0r+VQkRy88DwZFFiXBAWOS73PkRl8WzgU5JVVjyeDQi+LPhmOW63zyAxH9yvgKE31jCGDKqZltTPYh+rXkBmKXAIyKpLIsJpn8hskpMDzJZmhKFuAoXIfGeaPO+i1IQXHtpIZPHsVyCgXZJhnUm6TBPtI3UdkBv9mDo5DOVUxZFDpjAO/yHDcCcSTGVreZxDI8F58kgxqelMe5LD3h+aQGbrnsBENYrDjbTKobnMSFLh8A7Fkhpa4Ao8MgcpdZEjTuAI3h4DnRzJLYEMiODKPX3qKDAjOF30a+N3gYjJLz+SMs0lQUL2ZDDiYqkDCQffFcWSeih8sYEht/HUqjVJgjehTIOH0CjJT99QDbRJsKCxtG0+j0PWqvUOGFYdzyGxnlyVf5ZCQ9xM9tJPP5jbaIMEZ7J5B5jv6FR/iUPsP778eRw+hc4ajhEGBs+NkPIXDmTFuRyI4FBSW9EyhB2h9N+O0AgEFR5MoXK49XilzMDBktBZ+Fnia/oZ/ev6elKscAioUOEPtCyl8POucfRwSZOTVunZWxg9MoHtcnuxek5mQE7JBhoAODQIStBttCyh8OubmHEke4LBAhXM4uykt35mWb8212bPSi7M6nX9wWCGQfL2M9U73JjBw2KBfbl1M4VPxmG9tdl76gA0WWCBBhQYNKiRY8TMYMnuzXdVL6S/H90hQwGHvObeEwiv4Vpn1UG1ea9ZV510dOhxIG8npOnykNKF5Lt2jZjeDCgXJl4PLKdx6xja+4Hm94D3Hh471rhXFi+qm0X3UfMsgwKDeOreUIoP3awYFEsTNs8soMnh3MnAw6FdallNkOLGLQUBBcl/LSooMtTtkqODQBlpWU2TwbZGhgEG5fWY1RQbfVhkcDKK/eTVFhtrtMjg49Butiygy+LfKEOAodlKkCHyq94vhUx9T5GiYXjn73FiKioqKior6z/oTCs8KMOW0P6QAAAAASUVORK5CYII=");
+            width: 40rpx;
+            height: 40rpx;
+          }
+        }
+      }
+
+      .left,
+      .right {
+        width: 100rpx;
+        height: 55.3rpx;
+        display: flex;
+        align-items: center;
+
+        .img-box {
+          width: 60rpx;
+          height: 60rpx;
+          padding: 10rpx;
+          box-sizing: border-box;
+
+          image {
+            width: 40rpx;
+            height: 40rpx;
+          }
+        }
+      }
+    }
+
+    // 分类
+    .classify {
+      overflow-x: auto;
+      background: #f2f2f2;
+      font-size: 26rpx;
+      width: 720rpx;
+      white-space: nowrap;
+      position: relative;
+
+      .switch {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 68rpx;
+        height: 55rpx;
+        line-height: 55rpx;
+        background-color: #f2f2f2;
+        box-shadow: -15rpx 0 15rpx 0 #f2f2f2;
+        z-index: 99;
+
+        .icon {
+          &.active {
+            transform: rotateZ(180deg);
+          }
+
+          transition-duration: .2s;
+          vertical-align: middle;
+          width: 40rpx;
+          height: 40rpx;
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAABlBMVEX///+9vb18/6H5AAAAAXRSTlMAQObYZgAAAF9JREFUeNrtzCESwDAMxMD4/59umIBJJ6JalLo3OkmS5Ie55IbRyAmrUQtmlxisoeswtR3GurPn+4crcXYljq7EyZU4uBKfrsSHK/F0JR6mhCPYDmwHdKzVUaWTJElefOyLAQtGqMZ7AAAAAElFTkSuQmCC");
+          transform: rotate(0deg);
+          transition: transform .2s linear;
+          background-size: 100% 100%;
+        }
+      }
+
+      // 分类off
+      .tags {
+        overflow-x: auto;
+        background: #f2f2f2;
+        font-size: 26rpx;
+        white-space: nowrap;
+
+        .span-div {
+          padding-right: 0.76rem;
+          display: inline-block;
+        }
+
+        .tag {
+          display: inline-block;
+          padding: 0 25rpx;
+
+          text {
+            display: inline-block;
+            line-height: 55rpx;
+            border-bottom: 2px solid rgba(237, 91, 0, 0);
+
+            &.active {
+              color: rgb(237, 91, 0);
+              border-color: rgb(237, 91, 0);
+            }
+          }
+
+        }
+
+      }
+
+      // 分类on
+      .tags-on {
+        background-color: #f2f2f2;
+        font-size: 28rpx;
+        text-align: left;
+        padding: 0 25rpx;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: max-height .3s ease-in-out;
+
+        .title {
+          padding-top: 25rpx;
+        }
+
+        .btns {
+          margin-top: 34rpx;
+          display: flex;
+          flex-wrap: wrap;
+
+          .tag {
+            margin-bottom: 24rpx;
+            display: inline-block;
+            width: 152rpx;
+            height: 56rpx;
+            text-align: center;
+            line-height: 56rpx;
+            border: 1rpx solid #e5e5e5;
+            border-radius: 4rpx;
+            font-size: 25rpx;
+            margin-right: 14rpx;
+
+            &.active {
+              background-color: #fde0d5;
+              border-color: #ff6700;
+              color: #ff6700;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+
+
+  // 导航栏
+  .navigation {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 50%;
+    width: 720rpx;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: transform .2s ease-out;
+    box-shadow: 0 3rpx 14rpx 2rpx rgb(0 0 0 / 12%);
+    .navigation-box {
+      height: 90rpx;
+      -webkit-box-align: center;
+      align-items: center;
+      display: flex;
+
+      .navigation-item {
+        display: block;
+        color: #999;
+        position: relative;
+        -webkit-box-flex: 1;
+        flex: 1 1 auto;
+
+        &.acitve {
+          color: #ff6700;
+        }
+
+        image {
+          display: block;
+          width: 40rpx;
+          height: 40rpx;
+          margin: 0 auto 10rpx;
+          max-width: 30rpx;
+          max-height: 30rpx;
+
+        }
+
+        .text {
+
+          font-size: 22rpx;
+          line-height: 1.15;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

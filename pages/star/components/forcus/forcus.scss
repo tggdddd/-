@@ -1,0 +1,30 @@
+
+.login{
+  text-align: center;
+  .img{
+    margin: 260rpx auto 35rpx;
+    display: block;
+    width: 317rpx;
+    height: 100%;
+  }
+  .desc{
+    margin-bottom: 60rpx;
+    font-size: 32rpx;
+    font-family: MILanPro--GB1-4,MILanPro--GB1，sans-serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 43rpx;
+  }
+  .btn{
+    margin: 0 auto;
+    width: 227rpx;
+    height: 72rpx;
+    line-height: 72rpx;
+    background: #ff5528;
+    border-radius: 36rpx;
+    font-size: 28rpx;
+    font-family: MILanPro_MEDIUM--GB1-4,MILanPro_MEDIUM--GB1,sans-serif;
+    font-weight: 400;
+    color: #fff;
+  }
+}

@@ -1,0 +1,34 @@
+<view class="container" >
+  <!-- 标头 -->
+  <view class="header fixed">
+    <view class="header-left">
+      <image class="avatar" mode="aspectFill" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAB1BAMAAACCKrOPAAAALVBMVEVHcEzq6urp6enp6enn5+fp6enq6urp6enp6enp6enp6en////o6Ojz8/Pt7e1fQvdzAAAAC3RSTlMAWfXNEeEvtyGlgUYemSgAAAM1SURBVFjDpZlPaxNREMBfoGjoKRT/lNJDexBBckgVFSSHlBS0t9qC9NBDUESQHqp47CGoVY/+aVGKh1A8+g3WFLIhBO3sfoE0fgGTfAY3NY27fTPvzb4Zemt+zLzZmXkz85TCZenNzOcbq/7a7f1Lr0sqjWRnPq3CSPy1/ekU6NObeYjLlTsVJnnvMmjSnmYZvrgHiLQ+MODMdUDFX7BrLQIlCxbNi89JFPxnRjj7EQzifzGgE1NgFP8CzT7Jm1m4Sn7nzAbY5D5l8YEVBf8bzr7N21nC6nNF4MgtjH3EQqFZcXIU6a6LTBRaOe20XLUADxxPi52Y6WTU1XdToNBO5tNBGtavJT5QPg0L83H2cSoUWjFvTWynY+GFs8kJo1+mRMGvjk3+iv8iHAwGBLxrMTnoeJ7XtRiNB0bgnUjdHB5TpNahHKIHPk0mNJb/eKfSw/5dGB3XYDFpdeMfWzarxRU3S/RxY6j3gzww+nWDOFsnv3AWqzZHcdbD2HXSVZ0Ee0w567ztuPiB20N2E4tkOwvDHP5uZ9HQqhFRxWELhJuDJFsnHI0mIEdvlIaT4MheU2rZlf1ZUq/A7ftCs6p2wC2uoFVVD8GWgkT2+xU1C+CURwA5NKzOHPgQ/0lNEbW5YzMZ4L0irqLAajJsKerC75i9fBLQFBva1EYs2d/0R2iP+sGKoq/PvhmFOWW4KcN+d2D495xKe23H2Q1ndkUVndmCiN12ZrfQeB42GknB4xnJo66nSf0Yy6NZS97TyZTT60YfRfUAi+rGjrlU0UUrqldlnlo9n6KuYZmpVlMc1edJY2U2lK1f2n0UsNl57R40sHW94SgamhTP0LIUtHvfxPa0e3+TEVSY3orW57D1tvX+6ojrq4be17H9vK73k2x2V+9jQ2ZsjBr3sks8j/rnjEseNbB5IeSFcwGdU1h1YzynJOejsMPI3vF8dCYNUfg3MZdpE4NWngc9ah7E5tBe8o+cQ0Xzr2Tulsz7oj2DZL8h2qtI9jmSPZJofyXZm4n2dZI9oWg/KdmLivaxkj2waP8s2ntL9u2iPb/ofUH0riF6TxG944jej2TvVkPD/7+XvaPM/QuCRmd8K4rOoQAAAABJRU5ErkJggg==" />
+    </view>
+    <view class="header-center">
+      <view class="tab">
+        <view class="tab-item {{activeTag==0?'active':''}}" data-index="0" bind:tap="changeTag">关注</view>
+        <view class="tab-item {{activeTag==1?'active':''}}" data-index="1" bind:tap="changeTag">推荐</view>
+        <view class="tab-item {{activeTag==2?'active':''}}" data-index="2" bind:tap="changeTag">雷军年度演讲</view>
+        <view class="tab-item {{activeTag==3?'active':''}}" data-index="3" bind:tap="changeTag">小米发布</view>
+      </view>
+    </view>
+    <view class="header-right">
+      <image mode="aspectFill" src="/images/bell.png" style="width:100%;height:100%" />
+    </view>
+  </view>
+  <!-- fixed Tag -->
+  <view class="pubulish">
+    <image mode="scaleToFill" src="/images/publish.png" />
+  </view>
+  <!-- 内容 -->
+  <view class="body">
+    <forcus wx:if="{{activeTag == 0}}" />
+    <recommend wx:if="{{activeTag == 1}}" />
+    <view wx:if="{{activeTag == 2}}" >
+      ........
+    </view>
+    <view wx:if="{{activeTag == 3}}" >
+      ......
+    </view>
+  </view>
+</view>

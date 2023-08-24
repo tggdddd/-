@@ -1,0 +1,8 @@
+<view>
+<!-- 未登录 -->
+<view class="login">
+  <image class="img" src="/images/message.png" mode="widthFix"/>
+  <view class="desc">登录看关注人最新动态</view>
+  <view class="btn">立即登录</view>
+</view>
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/star/star",
+    "pages/category/category",
+    "pages/index/index",
+    "pages/test3/test3",
+    "pages/test4/test4"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "selectedColor": "#ff6700",
+    "color": "#999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/icon-home.c1947eda40.png",
+        "selectedIconPath": "/images/icon-home-selected.598ca2c8f9.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "selectedIconPath": "/images/icon-category-selected.252b82a2d7.png",
+        "iconPath": "/images/icon-category.be93273636.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/star/star",
+        "iconPath": "/images/icon-star.d051789804.png",
+        "selectedIconPath": "/images/icon-star-selected.52a68e3664.png",
+        "text": "米圈"
+      },
+      {
+        "pagePath": "pages/test3/test3",
+        "selectedIconPath": "/images/icon-cart.585c3aa4d3.png",
+        "iconPath": "/images/icon-cart.585c3aa4d3.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/test4/test4",
+        "selectedIconPath": "/images/icon-user.23496a0116.png",
+        "iconPath": "/images/icon-user.23496a0116.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

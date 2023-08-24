@@ -1,0 +1,218 @@
+<view class="container">
+  <view class="container-body-wrap">
+    <view class="header">
+    <!-- ad -->
+    <view class="dd" style="position: fixed;height: 74.5rpx;z-index: 99;left: 50%;right: 0;bottom: 120rpx;width: 266rpx;transform: translateX(-133rpx);">
+    <image lazy-load style="display: block;width: 100%;height: 100%;" mode="aspectFit" 
+    src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/831de258b72b38b8d586b387c2f54b16.png"/>
+    </view>
+      <view class="bar">
+        <view class="left">
+          <view class="img-box">
+            <image lazy-load src="	https://m.mi.com/static/img/icon-header-logo3.ddf2a1c313.png" />
+          </view>
+        </view>
+        <view class="content">
+          <view class="icon-box">
+            <view class="icon"></view>
+          </view>搜索商品名称
+        </view>
+        <view class="right">
+          <view class="img-box">
+            <image lazy-load src="https://m.mi.com/static/img/icon-user.23496a0116.png" />
+          </view>
+        </view>
+      </view>
+      <view class="classify">
+        <view class="switch" bind:tap="tagsClick">
+          <view class="icon {{tagsSwitch?'active':''}}"></view>
+        </view>
+        <view class="tags" hidden="{{tagsSwitch}}">
+          <view class="span-div"></view>
+          <view data-id="1" bind:tap="tagClick" class="tag"><text class=" {{tagsActive==1?'active':''}}">推荐</text></view>
+          <view data-id="2" bind:tap="tagClick" class="tag"><text class=" {{tagsActive==2?'active':''}}">智能</text></view>
+          <view data-id="3" bind:tap="tagClick" class="tag"><text class=" {{tagsActive==3?'active':''}}">电视</text></view>
+          <view data-id="4" bind:tap="tagClick" class="tag"><text class=" {{tagsActive==4?'active':''}}">家电</text></view>
+          <view data-id="5" bind:tap="tagClick" class="tag"><text class=" {{tagsActive==5?'active':''}}">笔记本</text></view>
+        </view>
+        <view class="tags-on" hidden="{{!tagsSwitch}}">
+          <view class="title">全部</view>
+          <view class="btns">
+            <view data-id="1" bind:tap="tagClick" class="tag {{tagsActive==1?'active':''}}">推荐</view>
+            <view data-id="2" bind:tap="tagClick" class="tag {{tagsActive==2?'active':''}}">智能</view>
+            <view data-id="3" bind:tap="tagClick" class="tag {{tagsActive==3?'active':''}}">电视</view>
+            <view data-id="4" bind:tap="tagClick" class="tag {{tagsActive==4?'active':''}}">家电</view>
+            <view data-id="5" bind:tap="tagClick" class="tag {{tagsActive==5?'active':''}}">笔记本</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="body">
+      <scroll-view  class="body1" scroll-y="true"  bindscroll="body-scroll" scroll-top="{{scrollTop}}" 	scroll-with-animation>
+       
+        <!-- 轮播 -->
+        <swiper indicator-dots="true" indicator-color="#ffffff33" indicator-active-color="#ffffff" circular="true" autoplay="true">
+          <block wx:for="{{carsouel}}" wx:key="*this">
+            <swiper-item>
+              <image lazy-load mode="aspectFill" src="{{item}}" />
+            </swiper-item>
+          </block>
+        </swiper>
+        <!-- 分类 -->
+        <view class="sort" wx:for="{{sorts}}" wx:key="index">
+          <image lazy-load src="{{url}}" mode="aspectFill" wx:for="{{item}}" wx:key="*this" wx:for-item="url" />
+        </view>
+     
+      <!-- i1 -->
+      <view class="i1" style="width: 720rpx;height: 508rpx; position: relative;">
+        <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/737e882999cf9d4147c7200f94eab7bb.jpg?f=webp&w=537&h=762&bg=E1E1E3" mode="scaleToFill" style="width:358rpx;height:508rpx;position:absolute;" />
+        <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f8a28a90c3c449ba422a10e40085d2e9.png?f=webp&w=537&h=378&bg=DBDEEF" mode="scaleToFill" style="width:358rpx;height:252rpx;left:362rpx;position:absolute;" />
+        <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/200a6f45d1ccbf7d8fd92f4bbe2842d4.jpeg?f=webp&w=537&h=378&bg=F3E7E7" mode="scaleToFill" style="width:358rpx;height:252rpx;left:362rpx;top:256rpx;position:absolute;" />
+      </view>
+      <view class="divide-line" style=" height: 16rpx;border-bottom: 16rpx solid rgb(245, 245, 245);background-color: rgb(245, 245, 245);"></view>
+      <!-- i2 -->
+      <view class="i2">
+        <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8413c40c709976450cce66a567d13236.jpg?f=webp&w=1080&h=660&bg=FFFFFF" mode="aspectFill" />
+      </view>
+      <view class="divide-line" style="height: 6.66667rpx;border-bottom: 6.66667rpx solid rgb(255, 255, 255);background-color: rgb(255, 255, 255);"></view>
+      <!-- i3 -->
+      <block wx:for="{{i3}}" wx:key="index">
+        <view class="i3">
+          <view class="i3-item" wx:for="{{item}}" wx:key="*this" wx:for-item="object" wx:for-index="oindex">
+            <image lazy-load src="{{object.url}}" mode="aspectFill" />
+            <view class="info">
+              <view class="name">{{object.name}}</view>
+              <view class="brief">{{object.brief}}</view>
+              <view class="price">{{object.price}}<text>起</text></view>
+              <view class="buybtn">立即购买</view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{index != i3.length-1}}" class="divide-line" style="height: 6.66667rpx;border-bottom:6.66667rpx solid rgb(255, 255, 255);background-color: rgb(255, 255, 255);"></view>
+        <view wx:else class="divide-line" style="height: 2rpx;border-bottom: 2rpx solid rgb(206, 206, 206);background-color: rgb(206, 206, 206);"></view>
+      </block>
+      <view class="i3-more">
+        <view style="background:#fff;height:100rpx;line-height: 100rpx;font-size:28rpx;text-align:center;">
+          <text style="color: rgba(0,0,0,.6);">更多小米产品</text>
+        </view>
+      </view>
+      <view class="divide-line" style="height: 16rpx; border-bottom: 16rpx solid rgb(245, 245, 245); background-color: rgb(245, 245, 245);"></view>
+      <!-- i4 -->
+      <view>
+        <image lazy-load style="height: 440rpx;width: 720rpx;" mode="aspectFill" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/396893c2d8416dc791cc3cd7f8a65bdf.jpeg?f=webp&w=1080&h=660&bg=FFFFFF" />
+      </view>
+      <view class="divide-line" style="height: 6.66667rpx;border-bottom:6.66667rpx solid rgb(255, 255, 255);background-color: rgb(255, 255, 255);"></view>
+      <view class="i4-more">
+        <view style="background:#fff;height:100rpx;line-height: 100rpx;font-size:28rpx;text-align:center;">
+          <text style="color: rgba(0,0,0,.6);">更多小米电视产品 &gt;</text>
+        </view>
+      </view>
+      <view class="divide-line" style=" height: 16rpx;border-bottom: 16rpx solid rgb(245, 245, 245);background-color: rgb(245, 245, 245);"></view>
+      <!-- i5 -->
+      <view>
+        <image lazy-load style="height: 440rpx;width: 720rpx;" mode="aspectFill" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/393a90da633889384d35acb7c44eeb17.jpg?f=webp&w=1080&h=660&bg=FFFFFF" />
+      </view>
+      <view class="divide-line" style="height: 6.66667rpx;border-bottom:6.66667rpx solid rgb(255, 255, 255);background-color: rgb(255, 255, 255);"></view>
+      <!-- i6   == i3 -->
+      <block wx:for="{{i6}}" wx:key="index">
+        <view class="i3">
+          <view class="i3-item" wx:for="{{item}}" wx:key="*this" wx:for-item="object" wx:for-index="oindex">
+            <image lazy-load src="{{object.url}}" mode="aspectFill" />
+            <view class="info">
+              <view class="name">{{object.name}}</view>
+              <view class="brief">{{object.brief}}</view>
+              <view class="price">{{object.price}}<text>起</text></view>
+              <view class="buybtn">立即购买</view>
+            </view>
+          </view>
+        </view>
+        <view class="divide-line" style="height: 6.66667rpx;border-bottom:6.66667rpx solid rgb(255, 255, 255);background-color: rgb(255, 255, 255);"></view>
+      </block>
+      <view class="i3-more">
+        <view style="background:#fff;height:100rpx;line-height: 100rpx;font-size:28rpx;text-align:center;">
+          <text style="color: rgba(0,0,0,.6);">更多小米笔记本产品</text>
+        </view>
+      </view>
+      <view class="divide-line" style="height: 16rpx; border-bottom: 16rpx solid rgb(245, 245, 245); background-color: rgb(245, 245, 245);"></view>
+      <!-- i7  == i4 -->
+      <view>
+        <image lazy-load style="height: 440rpx;width: 720rpx;" mode="aspectFill" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5442b538b27d4664b61b740e8934753b.jpg?f=webp&w=1080&h=660&bg=FFFFFF" />
+      </view>
+      <view class="divide-line" style="height: 6.66667rpx;border-bottom:6.66667rpx solid rgb(255, 255, 255);background-color: rgb(255, 255, 255);"></view>
+      <view class="i4-more">
+        <view style="background:#fff;height:100rpx;line-height: 100rpx;font-size:28rpx;text-align:center;">
+          <text style="color: rgba(0,0,0,.6);">更多米家家电产品</text>
+        </view>
+      </view>
+      <view class="divide-line" style=" height: 16rpx;border-bottom: 16rpx solid rgb(245, 245, 245);background-color: rgb(245, 245, 245);"></view>
+      <!-- i8 -->
+      <view class="i4-more">
+        <view style="background:#fff;height:100rpx;line-height: 100rpx;font-size:28rpx;text-align:center;">
+          <text style="color: rgba(0,0,0,.6);">更多米家智能产品</text>
+        </view>
+      </view>
+      <view class="divide-line" style=" height: 16rpx;border-bottom: 16rpx solid rgb(245, 245, 245);background-color: rgb(245, 245, 245);"></view>
+      <view class="i8" style="width: 720rpx;height: 480rpx;">
+        <image lazy-load src="https://i8.mifile.cn/v1/a1/46c44f3e-479d-a999-dd2d-98fb39b51e17.webp?w=537&h=720&bg=C0A491" mode="aspectFill" style="position:absolute;width: 358rpx;height: 480rpx;" class="i8-item" />
+        <image lazy-load src="https://i8.mifile.cn/v1/a1/b79cb907-3ae4-2a35-6756-b243b386a95a.webp?w=537&h=720&bg=E8CFCB" mode="aspectFill" style="position:absolute;width: 358rpx;height: 480rpx;left: 362rpx;" class="i8-item" />
+      </view>
+      <view class="divide-line" style="height: 4rpx; border-bottom: 4rpx solid rgb(245, 245, 245); background-color: rgb(245, 245, 245);"></view>
+      <view class="i8" style="width: 720rpx;height: 480rpx;">
+        <image lazy-load src="https://i8.mifile.cn/v1/a1/b883172b-5aa3-7855-678f-c615109ee0a7.webp?w=537&h=720&bg=878F9B" mode="aspectFill" style="position:absolute;width: 358rpx;height: 480rpx;" class="i8-item" />
+        <image lazy-load src="https://i8.mifile.cn/v1/a1/8cfcd654-4af5-9ae6-c6cc-1ba9d28be8e8.webp?w=537&h=720&bg=9BB5C4" mode="aspectFill" style="position:absolute;width: 358rpx;height: 480rpx;left: 362rpx;" class="i8-item" />
+      </view>
+      <view class="divide-line" style="height: 4rpx; border-bottom: 4rpx solid rgb(245, 245, 245); background-color: rgb(245, 245, 245);"></view>
+      <view class="i8" style="width: 720rpx;height: 480rpx;">
+        <image lazy-load src="https://i8.mifile.cn/v1/a1/52866372-7fe5-76c2-29a0-9ae32d07b8ff.webp?w=537&h=720&bg=D9D8C3" mode="aspectFill" style="position:absolute;width: 358rpx;height: 480rpx;" class="i8-item" />
+        <image lazy-load src="https://i8.mifile.cn/v1/a1/ad91499a-59ab-adc3-8fd5-98aefc1c43b4.webp?w=537&h=720&bg=B5C5BE" mode="aspectFill" style="position:absolute;width: 358rpx;height: 480rpx;left: 362rpx;" class="i8-item" />
+      </view>
+      <view class="divide-line" style="height: 16rpx; border-bottom: 16rpx solid rgb(245, 245, 245); background-color: rgb(245, 245, 245);"></view>
+      <!-- ad -->
+      <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f4c4a11536a720ee0f1b516e53e4d868.jpg?f=webp&w=1080&h=420&bg=873FFA" mode="aspectFill" style="width: 720rpx;height: 280rpx;" class="i8-item" />
+      <!-- tap -->
+      <view style="background-color: rgb(255, 255, 255);width: 720rpx;height:auto;">
+        <image lazy-load src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/bbb5bac8089d890338b5bf8ff742cbbc.png" mode="aspectFill" style="height: 106rpx;width: 720rpx;" />
+      </view>
+      </scroll-view>
+  </view><!--body-->
+    <!-- 滑块 -->
+    <view style="position: fixed;z-index: 997;bottom: 140rpx;right: 26rpx;">
+      <image lazy-load src="	https://m.mi.com/static/img/top.451d650ecd.png" style="width: 70rpx;height:70rpx;margin: 10rpx auto 0;box-sizing:border-box" mode="aspectFill" hidden="{{onTop}}" bind:tap="toTop" />
+    </view>
+  </view> <!--body-wrap-->
+  <!-- 导航栏 -->
+  <!-- <view class="navigation">
+    <view class="navigation-box">
+      <view class="navigation-item acitve">
+        <image lazy-load src="https://m.mi.com/static/img/icon-home-selected.598ca2c8f9.png" class="icon" />
+        <view class="text">
+          首页
+        </view>
+      </view>
+      <view class="navigation-item">
+        <image lazy-load src="https://m.mi.com/static/img/icon-category.be93273636.png" class="icon" />
+        <view class="text">
+          分类
+        </view>
+      </view>
+      <view class="navigation-item">
+        <image lazy-load src="https://m.mi.com/static/img/icon-star.d051789804.png" class="icon" />
+        <view class="text">
+          米圈
+        </view>
+      </view>
+      <view class="navigation-item">
+        <image lazy-load src="https://m.mi.com/static/img/icon-cart.585c3aa4d3.png" class="icon" />
+        <view class="text">
+          购物车
+        </view>
+      </view>
+      <view class="navigation-item">
+        <image lazy-load src="https://m.mi.com/static/img/icon-user.23496a0116.png" class="icon" />
+        <view class="text">
+          我的
+        </view>
+      </view>
+    </view>
+  </view> -->
+</view>

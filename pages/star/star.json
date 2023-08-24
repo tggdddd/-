@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "forcus": "./components/forcus/forcus",
+    "recommend": "./components/recommend/recommend"
+  }
+}

@@ -1,0 +1,86 @@
+<view class="container">
+  <!-- header -->
+  <view class="header">
+    <view class="search-bar">
+      <view class="icon"></view>
+      搜索商品名称
+    </view>
+  </view>
+  <!--header end-->
+  <!-- aside -->
+  <view class="aside">
+    <scroll-view id="list" class="list" scroll-y>
+      <view wx:for="{{category}}" wx:key="index" class="list-i {{categoryCur==index?'active':''}}" data-cur="{{index}}" bind:tap="changeCategory">
+        <text>{{item}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!--aside end-->
+  <!-- body -->
+  <view class="body">
+    <swiper  current="{{categoryCur}}"	vertical 	bindchange="changeCategoryBySc">
+      <!-- 轮播 -->
+      <swiper-item wx:for="{{items}}" wx:key="index">
+      <scroll-view id="sc" style="height: calc(100vh - 50rpx);" 	scroll-y >
+        <view id="scroll-body">
+        <!-- 大图 -->
+        <block wx:if="{{item.category_list[0].view_type == 'cells_auto_fill'}}">
+          <block wx:for="{{item.category_list[0].body.items}}" wx:for-item="image" wx:key="imagesI" wx:for-index="imagesI">
+            <image lazy-load mode="aspectFill" src="{{image.img_url}}" style="height: 146.667rpx;width: 489.333rpx;" />
+          </block>
+        </block>
+        <!-- 导航 -->
+        <view class="nav">
+          <view class="tag {{activeTag==titleIndex?'active':''}}" wx:for="{{item.title_list}}" wx:for-item="titles" wx:for-index="titleIndex" wx:key="titleIndex" bind:tap="toNav" data-index="{{titleIndex}}" data-cur="{{index}}">
+            {{titles.title}} 
+          </view>
+        </view>
+        <!-- 遍历列表 -->
+        <block wx:for="{{item.category_list}}" wx:for-item="list" wx:for-index="listIndex" wx:key="listIndex">
+
+          <!-- 标签 -->
+          <view class="title" wx:if="{{list.view_type == 'category_title'}}" id="title{{index}}A{{listIndex}}">
+            {{list.body.category_name}}
+          </view>
+          <!-- 商品 -->
+          <block  wx:elif="{{list.view_type == 'category_group'}}">
+          <!-- 二类 -->
+          <view class="shops-box">
+          <view class="shop-box2" style="padding-bottom: 50rpx;-webkit-box-flex: 1;flex: 1 1 auto;width: 100%;overflow: hidden;">
+            <view class="shop2" style="float: left;width: 33.333333333333336%;text-align: center;margin-top: 20rpx;margin-bottom: 30rpx;overflow: hidden;"  wx:for="{{list.body.items}}" wx:key="shopI"
+          wx:for-item="shop" wx:for-index="shopI">
+            <image src="{{shop.img_url}}" style="width: 100rpx;height:100rpx;" mode="aspectFill" lazy-load/>
+            <view style="margin-top: 0.28rem;white-space: nowrap;font-size: .23rem;color: rgba(0,0,0,.54);">{{shop.product_name}}</view>
+            </view>
+          </view>
+
+          </view>
+            <!-- 一类 -->
+          <view class="shops-box" wx:for="{{list.body.product_list}}" wx:key="shopI"
+          wx:for-item="shop" wx:for-index="shopI">
+            <view class="shop-box">
+              <view class="shop">
+                <image lazy-load mode="aspectFill" src="{{shop.puzzle_url}}" />
+                <view class="info">
+                  <view class="name">{{shop.name}}</view>
+                  <view class="price">
+                    {{shop.price}}
+                      <text>起</text>
+                      <view class="labels">
+                        <view class="label" wx:for="{{shop.labels}}"  wx:key="labelI"
+          wx:for-item="label" wx:for-index="labelI">{{label}}</view>
+                      </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+        </block>
+        </view>
+      </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--body end-->
+</view>

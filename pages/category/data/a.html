@@ -1,0 +1,32 @@
+<html>
+<script>
+    const keys = ['a', 'c', 'e']
+    const data = {
+        a: "123",
+        b: "1233",
+        c: {
+            f: "44",
+            a: "666",
+            e: "444"
+        }
+    }
+
+    function re(object) {
+        if (typeof object != "object") {
+            return object;
+        }
+        const res = {}
+        for (let key in object) {
+            if (keys.filter(e => e == key).length > 0) {
+                res[key] = re(object[key])
+            }
+            if (typeof object[key] == "object") {
+                re(object[key])
+            }
+        }
+        return res;
+    }
+    console.log(re(data))
+</script>
+
+</html>
