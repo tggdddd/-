@@ -7,7 +7,7 @@
     <!-- 卡片 -->
     <block wx:elif="{{item.rec_type==1}}">
       <!-- 问题  -->
-      <view class="card">
+      <view class="card" bind:tap="toDetail" data-type="question">
         <view class="card-content">
           <view class="question">
             <view class="user-ctrl"></view>

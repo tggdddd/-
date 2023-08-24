@@ -21,6 +21,15 @@ Component({
         this.setData({
           data: template
         })
+      },
+      toDetail(e){
+        const type = e.currentTarget.dataset.type
+        switch(type){
+          case "question":
+            wx.navigateTo({
+              url: '/pages/star/pages/questionDetail/questionDetail',
+            })
+        }
       }
   }
 })
