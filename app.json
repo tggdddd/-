@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/my/my",
     "pages/shopCart/shopCart",
     "pages/star/pages/topic/topic",
     "pages/index/index",
@@ -7,8 +8,7 @@
     "pages/star/pages/buyersShow/buyersShow",
     "pages/star/star",
     "pages/star/pages/questionDetail/questionDetail",
-    "pages/category/category",
-    "pages/test4/test4"
+    "pages/category/category"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -49,8 +49,8 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/test4/test4",
-        "selectedIconPath": "/images/icon-user.23496a0116.png",
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "/images/icon-user-selected.fceea5d907.png",
         "iconPath": "/images/icon-user.23496a0116.png",
         "text": "我的"
       }
