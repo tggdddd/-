@@ -155,6 +155,7 @@
         </view>
         <view class="checked-img icon-good-checked"></view>
       </view>
+<<<<<<< HEAD
       <view class="add-icon">
         <view class="icon icon-plus"></view>
       </view>
@@ -168,6 +169,8 @@
         </view>
         <view class="checked-img icon-good-checked"></view>
       </view>
+=======
+>>>>>>> c87135389ee39701f10f955830ec187b012d88ff
        <view class="add-icon">
         <view class="icon icon-plus"></view>
       </view>
@@ -188,7 +191,11 @@
       <view class=" price price-pre sub old ">333</view>
       <view class="price sub">节省<text class="price-pre">50</text></view>
     </view>
+<<<<<<< HEAD
     <view class="btn">购买此套餐（4件商品）</view>
+=======
+    <view class="btn">购买此套餐（2件商品）</view>
+>>>>>>> c87135389ee39701f10f955830ec187b012d88ff
   </view>
   <!-- 商品介绍 -->
   <!-- 商品推荐2 -->
