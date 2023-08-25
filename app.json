@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/star/star",
+    "pages/star/pages/topic/topic",
+    "pages/index/index",
+    "pages/star/pages/articleDetail/articleDetail",
     "pages/star/pages/buyersShow/buyersShow",
+    "pages/star/star",
     "pages/star/pages/questionDetail/questionDetail",
     "pages/category/category",
-    "pages/index/index",
     "pages/test3/test3",
     "pages/test4/test4"
   ],

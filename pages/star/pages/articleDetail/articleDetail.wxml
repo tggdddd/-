@@ -1,23 +1,33 @@
 <view class="container">
   <scroll-view scroll-y class="body">
-    <view class="body-header">
-      <view class="img-box">
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b3553083a4975325eab6470d94465548.jpg" mode="scaleToFill" />
-      </view>
-      <view class="title">Xiaomi 10S</view>
+    <view class="article">
+    <view class="title"></view>
+    <view class="card">
+    <!--  -->
+    <view class="user"></view>
+    <view class="card-content">
+    <!-- <view class="discover-article-box article-box"> -->
+      <rich-text mode="compat" user-select="{{true}}"  nodes="{{content}}" ></rich-text>
+    <!-- </view> -->
     </view>
-    <view class="question-list">
-      <view class="title">现在买米10s 还是买k40 哪个好 推荐一下
-      </view>
-      <view class="author-layout">
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/p01mUcqSeNgx/xnYwLXfigcg3dr.jpg?thumb=150x150" mode="scaleToFill" />
-        <view class="tips">
-          <view class="name">京城 &</view>
-          <view class="time"> 提问于2021-10-26 01:04</view>
-        </view>
-        <view class="follow-btn">关注问题</view>
-      </view>
     </view>
+    </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <view  scroll-y class="answer-list">
       <view class="answer-title">
         <view class="total"> 共 1563 条讨论</view>
