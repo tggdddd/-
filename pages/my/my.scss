@@ -28,6 +28,10 @@
     color: #fff;
     font-size: 24rpx;
     text-align: left;
+
+    .account {
+      color: hsla(0, 0%, 100%, .6);
+    }
   }
 }
 
@@ -77,18 +81,35 @@
   justify-content: space-between;
   font-size: 22rpx;
   color: rgba(0, 0, 0, .87);
-
+ 
   .order-action {
     display: flex;
     align-content: space-between;
     position: relative;
     padding: 40rpx 0;
     flex-direction: column;
-
     .icon {
       width: 48rpx;
       height: 48rpx;
       margin: 0 auto 16rpx;
+      position: relative;
+      .tip-num{
+        position: absolute;
+        min-width: 28rpx;
+        line-height: 28rpx;
+        height:28rpx;
+        box-sizing: border-box;
+        padding: 0 5rpx;
+        font-size: 18rpx;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 28rpx;
+        background: #ed4d41;
+        color: #fff;
+        right: 0;
+        top: 0;
+        transform: translate(50%,-50%);
+      }
     }
   }
 }
@@ -103,24 +124,28 @@
 }
 
 .items {
-     &::before{
-      display: block;
-      height: 20rpx;
-      background: #f5f5f5;
-      overflow: hidden;
-      clear: both;
-      width: 95%;
-      margin: 0 auto;
-      content:"";
-    
+  &::before {
+    display: block;
+    height: 20rpx;
+    background: #f5f5f5;
+    overflow: hidden;
+    clear: both;
+    width: 95%;
+    margin: 0 auto;
+    content: "";
+
   }
+
   background: #fff;
   width: 100%;
 
   .item {
-    &:not(:last-child){
-      .content,.right{
-      border-bottom: 1rpx solid rgba(0, 0, 0, .15);}
+    &:not(:last-child) {
+
+      .content,
+      .right {
+        border-bottom: 1rpx solid rgba(0, 0, 0, .15);
+      }
     }
 
     display: flex;
