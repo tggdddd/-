@@ -1,0 +1,78 @@
+<view class="container">
+  <view class="header">
+    <image class="bg" src="/images/my-header-bg.png" mode="scaleToFill" />
+    <!-- 未登陆 -->
+    <block>
+      <image class="avatar" src="/images/avatar.png" mode="scaleToFill"></image>
+      <view class="name">登录/注册</view>
+    </block>
+  </view>
+  <view class="order-header">
+    <view class="cite">我的订单</view>
+    <view class="action">全部订单</view>
+  </view>
+  <view class="order-actions">
+    <view class="order-action">
+      <view class="icon icon-wallet"></view>
+      <view>待付款</view>
+    </view>
+    <view class="order-action">
+      <view class="icon icon-car"></view>
+      <view>待收货</view>
+    </view>
+    <view class="order-action">
+      <view class="icon icon-wrench"></view>
+      <view>退换修</view>
+    </view>
+  </view>
+  <view class="items">
+    <view class="item">
+    <view class="left">
+      <image src="/images/my/crown.jpg" mode="scaleToFill"/>
+    </view>
+    <view class="content right">会员中心</view>
+    </view>
+    <view class="item">
+    <view class="left">
+      <image src="/images/my/wallet.jpg" mode="scaleToFill"/>
+    </view>
+    <view class="content right">我的优惠</view>
+    </view>
+  </view>
+  <view class="items">
+    <view class="item">
+    <view class="left">
+      <image src="/images/my/love.jpg" mode="scaleToFill"/>
+    </view>
+    <view class="content right">服务中心</view>
+    </view>
+    <view class="item">
+    <view class="left">
+      <image src="/images/my/shop.png" mode="scaleToFill"/>
+    </view>
+    <view class="content right">小米之家</view>
+    </view>
+  </view>
+  <view class="items">
+    <view class="item">
+    <view class="left">
+      <image src="/images/my/F.png" mode="scaleToFill"/>
+    </view>
+    <view class="content right">我的F码</view>
+    </view>
+    <view class="item">
+    <view class="left">
+      <image src="/images/my/gift.png" mode="scaleToFill"/>
+    </view>
+    <view class="content right">礼物码兑换</view>
+    </view>
+  </view>
+  <view class="items">
+    <view class="item">
+    <view class="left">
+      <image src="/images/my/setting.png" mode="scaleToFill"/>
+    </view>
+    <view class="content right">设置</view>
+    </view>
+  </view>
+</view>

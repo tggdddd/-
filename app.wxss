@@ -9,4 +9,5 @@
   box-sizing: border-box;
   max-width: 720rpx;
   margin: 0 auto;
-} 
+  font-family: Helvetica Neue, Tahoma, Arial, PingFangSC-Regular, Hiragino Sans GB, Microsoft Yahei, sans-serif;
+}
