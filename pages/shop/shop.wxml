@@ -1,0 +1,118 @@
+<scroll-view scroll-y id="#sc" class="container">
+  <!-- 轮播图 -->
+  <view hidden class="gallery">
+    <swiper autoplay circular easing-function="easeInOutCubic" id="gallery" bindchange="changeGalleryCur">
+      <block wx:for="{{gallery}}">
+        <swiper-item>
+          <image src="{{item.img-url}}" mode="scaleToFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="indicator">
+      <text>{{galleryCur}}</text>
+      /
+      <text>{{gallery.length}}</text>
+    </view>
+  </view>
+  <!-- 商品信息－价格 -->
+  <view class="product-info-product-price">
+    <view class="goods-price">
+      <view class="price current-price">
+        4299
+      </view>
+    </view>
+
+  </view>
+  <!-- 活动横幅 -->
+  <view class="coupon-active">
+    <view class="left">
+      <view class="cite">
+        预计得430米金
+      </view>
+    </view>
+    <view class="btn">
+      查看
+    </view>
+
+  </view>
+  <!-- 商品信息－商品名 -->
+  <view class="product-info-product-name">
+    <view class="product-name">
+      Xiaomi 13
+    </view>
+  </view>
+  <!-- 商品信息 - 商品描述 -->
+  <view class="product-info-product-desc">
+    <view class="product-brief">
+      「至高优惠300元！至高24期免息；下单抽奖赢好礼」
+    </view>
+    <view class="product-sell-point">
+      <view class="point">【徕卡影像】徕卡专业光学镜头，徕卡原生双画质</view>
+      <view class="point">【性能爆发】第二代骁龙8旗舰处理器，高性能，低功耗</view>
+      <view class="point">【先锋设计】高光金属直立边框，6.36″超窄边屏幕</view>
+    </view>
+  </view>
+  <!-- 商品攻略 -->
+  <view class="product-info-flow">
+    <view class="flow-distribution">
+      <text>Xiaomi 13 丨 购机攻略</text>
+    </view>
+
+  </view>
+  <!-- 商品类型属性 -->
+  <view class="product-info-class-parameters">
+    <view wx:for="{{7}}" class="classic-param-item">
+      <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f0c04e138bfed2b1ebb589de615236d1.png" mode="scaleToFill" />
+      <view class="item-name">CPU</view>
+      <view class="item-value">第二代骁龙8</view>
+    </view>
+
+  </view>
+  <!-- 排行榜 -->
+  <view class="rank-info">
+    <image class="left" src="/images/rank.png" mode="scaleToFill" />
+    <view class="right">
+      <view class="text">【手机热销榜】第3名</view>
+      <view class="icon icon-go">
+      </view>
+    </view>
+  </view>
+  <view class="blank-line"></view>
+  <!-- 商品SKU选择信息 -->
+  <view class="product-section-box">
+    <!-- 选择信息 -->
+    <view class="product-section-item">
+      <view class="left">已选</view>
+      <view class="content">
+        <view>
+          <text class="pro-name">Xiaomi 13 12GB+256GB 黑色</text>
+          <text class="pro-num"> x 1</text>
+        </view>
+      </view>
+      <view class="right icon-go"></view>
+    </view>
+    <!-- 配送信息 -->
+    <view class="product-section-item">
+      <view class="left">送至</view>
+      <view class="content send-to">
+        <view class="info">
+          <view class="icon icon-location"></view>
+          <view class="area">北京市 东城区</view>
+          <view class="on"> 有现货</view>
+        </view>
+        <view class="information">
+          今天23点前付款，预计8月26日送达</view>
+
+      </view>
+      <view class="right icon-go"></view>
+    </view>
+  </view>
+  <!-- 配送信息 -->
+  <!-- 商品描述 -->
+  <!-- 用户评价 -->
+  <!-- 商品推荐 -->
+  <!-- 商品介绍 -->
+  <!-- 商品推荐2 -->
+  <!-- 底部操作按钮 -->
+  <view class="footer"></view>
+</scroll-view>
