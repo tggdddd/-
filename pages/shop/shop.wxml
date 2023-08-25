@@ -15,7 +15,7 @@
     </view>
   </view>
   <!-- 商品信息－价格 -->
-  <view class="product-info-product-price">
+  <view hidden class="product-info-product-price">
     <view class="goods-price">
       <view class="price current-price">
         4299
@@ -24,7 +24,7 @@
 
   </view>
   <!-- 活动横幅 -->
-  <view class="coupon-active">
+  <view hidden class="coupon-active">
     <view class="left">
       <view class="cite">
         预计得430米金
@@ -36,13 +36,13 @@
 
   </view>
   <!-- 商品信息－商品名 -->
-  <view class="product-info-product-name">
+  <view hidden class="product-info-product-name">
     <view class="product-name">
       Xiaomi 13
     </view>
   </view>
   <!-- 商品信息 - 商品描述 -->
-  <view class="product-info-product-desc">
+  <view hidden class="product-info-product-desc">
     <view class="product-brief">
       「至高优惠300元！至高24期免息；下单抽奖赢好礼」
     </view>
@@ -53,14 +53,14 @@
     </view>
   </view>
   <!-- 商品攻略 -->
-  <view class="product-info-flow">
+  <view hidden class="product-info-flow">
     <view class="flow-distribution">
       <text>Xiaomi 13 丨 购机攻略</text>
     </view>
 
   </view>
   <!-- 商品类型属性 -->
-  <view class="product-info-class-parameters">
+  <view hidden class="product-info-class-parameters">
     <view wx:for="{{7}}" class="classic-param-item">
       <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f0c04e138bfed2b1ebb589de615236d1.png" mode="scaleToFill" />
       <view class="item-name">CPU</view>
@@ -106,11 +106,77 @@
       </view>
       <view class="right icon-go"></view>
     </view>
+    <!-- 服务政策信息 -->
+    <view class="product-section-item">
+      <view class="content service-policy-list">
+        <view class="service-policy">
+          <view class="icon icon-checked"></view>
+          <view class="text">小米自营</view>
+        </view>
+        <view class="service-policy">
+          <view class="icon icon-checked"></view>
+          <view class="text">小米发货</view>
+        </view>
+        <view class="service-policy">
+          <view class="icon icon-checked"></view>
+          <view class="text">7天无理由退货（到店自取拆封后不支持）</view>
+        </view>
+      </view>
+      <view class="right icon-go"></view>
+    </view>
   </view>
-  <!-- 配送信息 -->
-  <!-- 商品描述 -->
-  <!-- 用户评价 -->
-  <!-- 商品推荐 -->
+  <view class="blank-line"></view>
+  <!-- 商品推荐 商户自定 -->
+  <view class="product-info-package">
+    <view class="header">
+      推荐套餐
+    </view>
+    <view class="content">
+      <view class="product-package-maim checked">
+        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
+        <view class="product-content">
+          <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
+          <view class="product-price">4299</view>
+          <view class="product-price old">123
+          </view>
+        </view>
+        <view class="checked-img icon-good-checked"></view>
+      </view>
+      <view class="add-icon">
+        <view class="icon icon-plus"></view>
+      </view>
+      <view class="product-package-maim checked">
+        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
+        <view class="product-content">
+          <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
+          <view class="product-price">4299</view>
+          <view class="product-price old">123
+          </view>
+        </view>
+        <view class="checked-img icon-good-checked"></view>
+      </view>
+       <view class="add-icon">
+        <view class="icon icon-plus"></view>
+      </view>
+      <view class="product-package-maim checked">
+        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
+        <view class="product-content">
+          <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
+          <view class="product-price">4299</view>
+          <view class="product-price old">123
+          </view>
+        </view>
+        <view class="checked-img icon-good-checked"></view>
+      </view>
+    </view>
+    <view class="detail">
+      <view>总价</view>
+      <view class="price-pre price">4498</view>
+      <view class=" price price-pre sub old ">333</view>
+      <view class="price sub">节省<text class="price-pre">50</text></view>
+    </view>
+    <view class="btn">购买此套餐（2件商品）</view>
+  </view>
   <!-- 商品介绍 -->
   <!-- 商品推荐2 -->
   <!-- 底部操作按钮 -->
