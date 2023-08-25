@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/shopCart/shopCart",
     "pages/star/pages/topic/topic",
     "pages/index/index",
     "pages/star/pages/articleDetail/articleDetail",
@@ -7,7 +8,6 @@
     "pages/star/star",
     "pages/star/pages/questionDetail/questionDetail",
     "pages/category/category",
-    "pages/test3/test3",
     "pages/test4/test4"
   ],
   "window": {
@@ -43,7 +43,7 @@
         "text": "米圈"
       },
       {
-        "pagePath": "pages/test3/test3",
+        "pagePath": "pages/shopCart/shopCart",
         "selectedIconPath": "/images/icon-cart.585c3aa4d3.png",
         "iconPath": "/images/icon-cart.585c3aa4d3.png",
         "text": "购物车"

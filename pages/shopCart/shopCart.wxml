@@ -1,0 +1,46 @@
+<view class="container">
+  <!-- 未登陆 -->
+  <view class="un-login">
+    <view class="tips">
+      <view class="left">
+        <view class="tips-text">登录后享受更多优惠</view>
+      </view>
+      <view class="right">
+        <text class="text">去登录</text>
+        <text class="text-icon-go">></text>
+      </view>
+    </view>
+    <view class="content">
+      <image src="/images/cart.png" mode="widthFix" />
+      <view class="desc">购物车还是空的</view>
+      <view class="btn">随便看看</view>
+    </view>
+  </view>
+  <!-- 已登陆 -->
+  <!-- <view>
+  </view> -->
+  <view class="header">
+    <view class="title-decorate"></view>
+    <view class="title">精选好物</view>
+    <view class="title-decorate right"></view>
+  </view>
+  <view class="shopList">
+    <view wx:for="{{7}}" class="shop">
+      <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202308122142_7e259a200b6aaec5a2c0445a665e38c3.png?w=800&h=800" mode="scaleToFill" />
+      <view class="name">
+        <view class="tag">小米上新</view>Redmi K60 至尊版
+      </view>
+      <view class="tags">
+        <view class="tag">3期免息</view>
+        <view class="tag">加价购</view>
+      </view>
+      <view class="price-info">
+        <view class="pre">￥</view>
+        <view class="price">2599</view>
+        <text>起</text>
+        <view class="old-price">￥222</view>
+      </view>
+    </view>
+  </view>
+
+</view>

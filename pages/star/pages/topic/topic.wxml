@@ -47,171 +47,171 @@
           </view>
         </view>
       </view>
-      
-    <view wx:elif="{{activeNav == 1}}">
-      <view class="card" bind:tap="toDetail" data-type="buyersShow">
-        <view class="user">
-          <view class="user-avatar">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />
-          </view>
-          <view class="user-info">
-            <view class="user-info-name">卡迪拉</view>
-          </view>
-          <view class="user-ctrl">
-          </view>
-        </view>
-        <view class="card-content">
-          <view class="normal">
-            <view class="content">
-              第2批买小米10S没有送，昨天评价完了以后,突然看到账户里有一张优惠券，闲着无聊就点开看了一下是什么优惠券，一看居然可以以0.01元的价格购入这个30瓦的充电器，一阵狂喜，本来还想去翻车鱼上购买一个无奈那边传家宝太多，后来就想想还是算了，没想到这一次白送一个。充电很快，说个不足，手机不能横着充，只能竖着充。
+
+      <view wx:elif="{{activeNav == 1}}">
+        <view class="card" bind:tap="toDetail" data-type="buyersShow">
+          <view class="user">
+            <view class="user-avatar">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />
             </view>
-            <view class="images">
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898656_3062251_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
-              </view>
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898656_1049447_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
-              </view>
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898655_1237771_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
-              </view>
+            <view class="user-info">
+              <view class="user-info-name">卡迪拉</view>
+            </view>
+            <view class="user-ctrl">
             </view>
           </view>
-        </view>
-        <view class="moment-tags">
-          <view class="tags-item">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68f494d205bd32a34728d0eb0f0ae81b.png?w=800&h=800" mode="heightFix" lazy-load />
-            <text>小米立式风冷无线充 30W</text>
-          </view>
-        </view>
-        <view class="card-message">
-          <view class="card-message-item">
-            <view>
-              <text class="name">黑哥：</text>好
-            </view>
-          </view>
-        </view>
-        <view class="card-ctrl">
-          <view class="icon-btn icon-share">
-          </view>
-          <view class="icon-btn icon-message">
-            <text class="num">564</text>
-          </view>
-          <view class="icon-btn icon-good">
-            <text class="num">27.0w</text>
-          </view>
-        </view>
-      </view>
-      <view class="card" bind:tap="toDetail" data-type="buyersShow">
-        <view class="user">
-          <view class="user-avatar">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />
-          </view>
-          <view class="user-info">
-            <view class="user-info-name">卡迪拉</view>
-          </view>
-          <view class="user-ctrl">
-          </view>
-        </view>
-        <view class="card-content">
-          <view class="normal">
-            <view class="content">
-              第2批买小米10S没有送，昨天评价完了以后,突然看到账户里有一张优惠券，闲着无聊就点开看了一下是什么优惠券，一看居然可以以0.01元的价格购入这个30瓦的充电器，一阵狂喜，本来还想去翻车鱼上购买一个无奈那边传家宝太多，后来就想想还是算了，没想到这一次白送一个。充电很快，说个不足，手机不能横着充，只能竖着充。
-            </view>
-            <view class="images">
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898656_3062251_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+          <view class="card-content">
+            <view class="normal">
+              <view class="content">
+                第2批买小米10S没有送，昨天评价完了以后,突然看到账户里有一张优惠券，闲着无聊就点开看了一下是什么优惠券，一看居然可以以0.01元的价格购入这个30瓦的充电器，一阵狂喜，本来还想去翻车鱼上购买一个无奈那边传家宝太多，后来就想想还是算了，没想到这一次白送一个。充电很快，说个不足，手机不能横着充，只能竖着充。
               </view>
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898656_1049447_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
-              </view>
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898655_1237771_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+              <view class="images">
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898656_3062251_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898656_1049447_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898655_1237771_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
               </view>
             </view>
           </view>
-        </view>
-        <view class="moment-tags">
-          <view class="tags-item">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68f494d205bd32a34728d0eb0f0ae81b.png?w=800&h=800" mode="heightFix" lazy-load />
-            <text>小米立式风冷无线充 30W</text>
-          </view>
-        </view>
-        <view class="card-message">
-          <view class="card-message-item">
-            <view>
-              <text class="name">黑哥：</text>好
+          <view class="moment-tags">
+            <view class="tags-item">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68f494d205bd32a34728d0eb0f0ae81b.png?w=800&h=800" mode="heightFix" lazy-load />
+              <text>小米立式风冷无线充 30W</text>
             </view>
           </view>
-        </view>
-        <view class="card-ctrl">
-          <view class="icon-btn icon-share">
-          </view>
-          <view class="icon-btn icon-message">
-            <text class="num">564</text>
-          </view>
-          <view class="icon-btn icon-good">
-            <text class="num">27.0w</text>
-          </view>
-        </view>
-      </view>
-      <view class="card" bind:tap="toDetail" data-type="buyersShow">
-        <view class="user">
-          <view class="user-avatar">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />
-          </view>
-          <view class="user-info">
-            <view class="user-info-name">卡迪拉</view>
-          </view>
-          <view class="user-ctrl">
-          </view>
-        </view>
-        <view class="card-content">
-          <view class="normal">
-            <view class="content">
-              第2批买小米10S没有送，昨天评价完了以后,突然看到账户里有一张优惠券，闲着无聊就点开看了一下是什么优惠券，一看居然可以以0.01元的价格购入这个30瓦的充电器，一阵狂喜，本来还想去翻车鱼上购买一个无奈那边传家宝太多，后来就想想还是算了，没想到这一次白送一个。充电很快，说个不足，手机不能横着充，只能竖着充。
-            </view>
-            <view class="images">
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898656_3062251_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
-              </view>
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898656_1049447_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
-              </view>
-              <view class="image">
-                <image src="https://i1.mifile.cn/a2/1616898655_1237771_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+          <view class="card-message">
+            <view class="card-message-item">
+              <view>
+                <text class="name">黑哥：</text>好
               </view>
             </view>
           </view>
-        </view>
-        <view class="moment-tags">
-          <view class="tags-item">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68f494d205bd32a34728d0eb0f0ae81b.png?w=800&h=800" mode="heightFix" lazy-load />
-            <text>小米立式风冷无线充 30W</text>
-          </view>
-        </view>
-        <view class="card-message">
-          <view class="card-message-item">
-            <view>
-              <text class="name">黑哥：</text>好
+          <view class="card-ctrl">
+            <view class="icon-btn icon-share">
+            </view>
+            <view class="icon-btn icon-message">
+              <text class="num">564</text>
+            </view>
+            <view class="icon-btn icon-good">
+              <text class="num">27.0w</text>
             </view>
           </view>
         </view>
-        <view class="card-ctrl">
-          <view class="icon-btn icon-share">
+        <view class="card" bind:tap="toDetail" data-type="buyersShow">
+          <view class="user">
+            <view class="user-avatar">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />
+            </view>
+            <view class="user-info">
+              <view class="user-info-name">卡迪拉</view>
+            </view>
+            <view class="user-ctrl">
+            </view>
           </view>
-          <view class="icon-btn icon-message">
-            <text class="num">564</text>
+          <view class="card-content">
+            <view class="normal">
+              <view class="content">
+                第2批买小米10S没有送，昨天评价完了以后,突然看到账户里有一张优惠券，闲着无聊就点开看了一下是什么优惠券，一看居然可以以0.01元的价格购入这个30瓦的充电器，一阵狂喜，本来还想去翻车鱼上购买一个无奈那边传家宝太多，后来就想想还是算了，没想到这一次白送一个。充电很快，说个不足，手机不能横着充，只能竖着充。
+              </view>
+              <view class="images">
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898656_3062251_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898656_1049447_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898655_1237771_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+              </view>
+            </view>
           </view>
-          <view class="icon-btn icon-good">
-            <text class="num">27.0w</text>
+          <view class="moment-tags">
+            <view class="tags-item">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68f494d205bd32a34728d0eb0f0ae81b.png?w=800&h=800" mode="heightFix" lazy-load />
+              <text>小米立式风冷无线充 30W</text>
+            </view>
+          </view>
+          <view class="card-message">
+            <view class="card-message-item">
+              <view>
+                <text class="name">黑哥：</text>好
+              </view>
+            </view>
+          </view>
+          <view class="card-ctrl">
+            <view class="icon-btn icon-share">
+            </view>
+            <view class="icon-btn icon-message">
+              <text class="num">564</text>
+            </view>
+            <view class="icon-btn icon-good">
+              <text class="num">27.0w</text>
+            </view>
+          </view>
+        </view>
+        <view class="card" bind:tap="toDetail" data-type="buyersShow">
+          <view class="user">
+            <view class="user-avatar">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/cFe33Y0MV3qGGKKFWGdTbFen_zE-d3edb592.jpg?thumb=150x150" mode="aspectFit" lazy-load />
+            </view>
+            <view class="user-info">
+              <view class="user-info-name">卡迪拉</view>
+            </view>
+            <view class="user-ctrl">
+            </view>
+          </view>
+          <view class="card-content">
+            <view class="normal">
+              <view class="content">
+                第2批买小米10S没有送，昨天评价完了以后,突然看到账户里有一张优惠券，闲着无聊就点开看了一下是什么优惠券，一看居然可以以0.01元的价格购入这个30瓦的充电器，一阵狂喜，本来还想去翻车鱼上购买一个无奈那边传家宝太多，后来就想想还是算了，没想到这一次白送一个。充电很快，说个不足，手机不能横着充，只能竖着充。
+              </view>
+              <view class="images">
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898656_3062251_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898656_1049447_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+                <view class="image">
+                  <image src="https://i1.mifile.cn/a2/1616898655_1237771_s1086_1448wh.jpg" mode="aspectFill" lazy-load />
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="moment-tags">
+            <view class="tags-item">
+              <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/68f494d205bd32a34728d0eb0f0ae81b.png?w=800&h=800" mode="heightFix" lazy-load />
+              <text>小米立式风冷无线充 30W</text>
+            </view>
+          </view>
+          <view class="card-message">
+            <view class="card-message-item">
+              <view>
+                <text class="name">黑哥：</text>好
+              </view>
+            </view>
+          </view>
+          <view class="card-ctrl">
+            <view class="icon-btn icon-share">
+            </view>
+            <view class="icon-btn icon-message">
+              <text class="num">564</text>
+            </view>
+            <view class="icon-btn icon-good">
+              <text class="num">27.0w</text>
+            </view>
           </view>
         </view>
       </view>
     </view>
+    <view class="fixed">
+      <image src="/images/join.png" mode="widthFix" />
     </view>
-  <view class="fixed">
-    <image src="/images/join.png" mode="widthFix" />
-  </view>
   </view>
 </scroll-view>
