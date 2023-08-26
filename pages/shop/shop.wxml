@@ -366,9 +366,9 @@
       <view class="item {{scrollOn==3?'active':''}}" data-id="recommend" data-index="0" bind:tap="scrollTo">推荐</view>
     </view>
     <!-- 弹窗 -->
-    <view class="mock active">
+    <view class="mock {{mockStatus==0?'':'active'}}" bind:tap="changeMockStatus" data-stauts="0">
       <view class="mock-body">
-        <view class="close"></view>
+        <view class="close" bind:tap="changeMockStatus" data-stauts="0"></view>
         <!-- 商品购买选择 -->
         <view class="shop-select">
           <!-- 商品信息 -->
@@ -382,34 +382,39 @@
           <!-- 商品规格 -->
           <view class="shop-sku">
             <view class="title">
-            版本</view>
+              版本</view>
             <view class="tags-box">
-            <view class="tag">12GB+256GB</view>
-            <view class="tag">12GB+256GB</view>
-            <view class="tag selected">12GB+256GB</view>
+              <view class="tag">12GB+256GB</view>
+              <view class="tag">12GB+256GB</view>
+              <view class="tag selected">12GB+256GB</view>
             </view>
           </view>
           <!-- 商品属性 -->
           <view class="shop-class">
             <view class="title">
-            颜色</view>
+              颜色</view>
             <view class="tags-box">
-            <view class="tag">黑色</view>
-            <view class="tag">白色</view>
-            <view class="tag selected">青红色</view>
+              <view class="tag">黑色</view>
+              <view class="tag">白色</view>
+              <view class="tag selected">青红色</view>
             </view>
           </view>
           <!-- 购买数量 -->
           <view class="num">
             <view class="title">购买数量</view>
             <view class="action-box">
-            <view class="sub disable" bind:tap="subNum">-</view><input class="number" type="number" value="{{buyNum}}" bindinput="changeNum"/>
-            <view class="add" bind:tap="addNum">+</view></view>
+              <view class="sub disable" bind:tap="subNum">-</view><input class="number" type="number" value="{{buyNum}}" bindinput="changeNum" />
+              <view class="add" bind:tap="addNum">+</view>
+            </view>
           </view>
           <!-- 额外服务 -->
           <view class="other-service">
-          
-          
+            <view class="title">小米服务</view>
+            <view class="service-box">
+              <view class="service header"></view>
+              <view class="service-body"></view>
+
+            </view>
           </view>
           <!-- 操作按钮 -->
           <view class="bottom-btn">

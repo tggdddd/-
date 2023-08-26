@@ -60,7 +60,15 @@ Page({
     productDescriptionActive: 0, //商品描述位置
     onTop: true, //是否位于顶部
     scrollOn: 0, // 滑条当前区域 0商品 1评价 2详情 3推荐
-    buyNum: 3//商品购买选择的数量
+    buyNum: 3,//商品购买选择的数量
+    mockStatus: 1 // 弹窗的状态 0关闭 1购买 2属性
+  },
+  //改变弹窗状态
+  changeMockStatus(e){
+    const status = e.currentTarget.dataset.status
+    this.setData({
+      mockStatus: status
+    })
   },
   //顶部轮播图位置切换
   changeGalleryCur(e) {

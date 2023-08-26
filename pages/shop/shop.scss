@@ -1381,6 +1381,16 @@
       }
     }
   }
+  .other-service{
+    .service-box{
+      .service-header{
+          display: flex;
+          justify-content: space-between;
+        align-items: center;
+
+      }
+    }
+  }
   .bottom-btn{
     position: sticky;
     bottom: 0;
@@ -1389,7 +1399,7 @@
     border-radius: 40rpx;
     line-height: 72rpx;
     text-align: center;
-    margin-top: 60rpx;
+    margin-top: 52rpx;
     font-size: 28rpx;color: #fff;
     background: linear-gradient(to right,#ff7d00,#ff5934);
   }
