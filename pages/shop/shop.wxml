@@ -2,7 +2,7 @@
   <!-- 轮播图 -->
   <view hidden class="gallery">
     <swiper autoplay circular easing-function="easeInOutCubic" id="gallery" bindchange="changeGalleryCur">
-      <block wx:for="{{gallery}}">
+      <block wx:for="{{gallery}}" wx:key="index">
         <swiper-item>
           <image src="{{item.img-url}}" mode="scaleToFill" />
         </swiper-item>
@@ -61,7 +61,7 @@
   </view>
   <!-- 商品类型属性 -->
   <view hidden class="product-info-class-parameters">
-    <view wx:for="{{7}}" class="classic-param-item">
+    <view wx:for="{{7}}" wx:key="index" class="classic-param-item">
       <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f0c04e138bfed2b1ebb589de615236d1.png" mode="scaleToFill" />
       <view class="item-name">CPU</view>
       <view class="item-value">第二代骁龙8</view>
@@ -69,7 +69,7 @@
 
   </view>
   <!-- 排行榜 -->
-  <view class="rank-info">
+  <view hidden class="rank-info">
     <image class="left" src="/images/rank.png" mode="scaleToFill" />
     <view class="right">
       <view class="text">【手机热销榜】第3名</view>
@@ -79,7 +79,7 @@
   </view>
   <view class="blank-line"></view>
   <!-- 商品SKU选择信息 -->
-  <view class="product-section-box">
+  <view hidden class="product-section-box">
     <!-- 选择信息 -->
     <view class="product-section-item">
       <view class="left">已选</view>
@@ -127,7 +127,7 @@
   </view>
   <view class="blank-line"></view>
   <!-- 商品推荐 商户自定 -->
-  <view class="product-info-package">
+  <view hidden class="product-info-package">
     <view class="header">
       推荐套餐
     </view>
@@ -155,7 +155,6 @@
         </view>
         <view class="checked-img icon-good-checked"></view>
       </view>
-<<<<<<< HEAD
       <view class="add-icon">
         <view class="icon icon-plus"></view>
       </view>
@@ -169,9 +168,7 @@
         </view>
         <view class="checked-img icon-good-checked"></view>
       </view>
-=======
->>>>>>> c87135389ee39701f10f955830ec187b012d88ff
-       <view class="add-icon">
+      <view class="add-icon">
         <view class="icon icon-plus"></view>
       </view>
       <view class="product-package-maim checked">
@@ -191,12 +188,76 @@
       <view class=" price price-pre sub old ">333</view>
       <view class="price sub">节省<text class="price-pre">50</text></view>
     </view>
-<<<<<<< HEAD
     <view class="btn">购买此套餐（4件商品）</view>
-=======
-    <view class="btn">购买此套餐（2件商品）</view>
->>>>>>> c87135389ee39701f10f955830ec187b012d88ff
   </view>
+  <!-- 用户评价 -->
+  <view class="comments-gallery">
+    <view class="flex-box comments-title">
+      <view class="left">用户评价</view>
+      <view class="right">好评率99.9%
+        <text class="icon-go"></text>
+      </view>
+    </view>
+    <view class="comments-tags">
+      <view wx:for="{{6}}" wx:key="index" class="comments-tag">
+        价格实惠
+      </view>
+    </view>
+    <view class="comments-view">
+      <view class="comment-box" wx:key="index" wx:for="{{5}}">
+        <view class="comment-header">
+          <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/2d2776dc-4ae4-4c34-a9e0-f63954dcf069.jpg" mode="scaleToFill" />
+          <view class="user-info">
+            <view class="name">丶老猫</view>
+            <view class="comment-date">2023-08-25
+            </view>
+          </view>
+        </view>
+        <view class="comment-content">
+          <view class="comment-text">下单两天就送到了，给媳妇买的，大小正合适，13这次外观设计深得我心，好评好..1233232123213213213123211232131232131313.</view>
+          <view class="comment-photos">
+            <image wx:key="index" wx:for="{{5}}" src="https://i1.mifile.cn/a2/1692938151_5839586_s1500_2000wh.jpg" mode="scaleToFill" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="blank-line">
+  </view>
+  <!-- 点评 -->
+  <view class="product-info-content">
+    <view class="flex-box header">
+      <view class="left">米粉点评团</view>
+      <view class="right icon-go"></view>
+    </view>
+    <view class="content">
+      <view wx:for="{{5}}" wx:key="index" class="box">
+        <view class="image-box">
+          <image class="image-blur" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a66ed665000066caa7cddb01f110208.jpg?w=160&h=90" mode="scaleToFill" />
+          <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a66ed665000066caa7cddb01f110208.jpg?w=160&h=90" mode="aspectFit" />
+        </view>
+        <view class="article-text">
+          从学生小白到摄影大叔，和小米相识12年了
+        </view>
+        <view class="article-addition">
+          <view class="article-author">
+            <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/b8e89c9b-e666-4994-9c09-b49f74518e79.jpg?thumb=150x150" mode="scaleToFill" class="avatar"/>
+            <view class="name">揭阳大雨</view>
+          </view>
+          <view class="article-info">
+            <text class="icon-view icon"></text>
+            6203
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 广告轮播图 -->
+  <swiper class="ad-swiper">
+  
+  </swiper>
   <!-- 商品介绍 -->
   <!-- 商品推荐2 -->
   <!-- 底部操作按钮 -->
