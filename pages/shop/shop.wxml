@@ -1,335 +1,422 @@
-<scroll-view scroll-y id="#sc" class="container">
-  <!-- 轮播图 -->
-  <view hidden class="gallery">
-    <swiper autoplay circular easing-function="easeInOutCubic" id="gallery" bindchange="changeGalleryCur">
-      <block wx:for="{{gallery}}" wx:key="index">
-        <swiper-item>
-          <image src="{{item.img-url}}" mode="scaleToFill" />
-        </swiper-item>
-      </block>
-    </swiper>
-    <view class="indicator">
-      <text>{{galleryCur}}</text>
-      /
-      <text>{{gallery.length}}</text>
-    </view>
-  </view>
-  <!-- 商品信息－价格 -->
-  <view hidden class="product-info-product-price">
-    <view class="goods-price">
-      <view class="price current-price">
-        4299
+<scroll-view scroll-y id="sc" class="container" enhanced paging-enabled>
+  <view id="top">
+    <!-- 轮播图 -->
+    <view class="gallery">
+      <swiper autoplay circular easing-function="easeInOutCubic" id="gallery" bindchange="changeGalleryCur">
+        <block wx:for="{{gallery}}" wx:key="index">
+          <swiper-item>
+            <image lazy-load src="{{item.img_url}}" mode="scaleToFill" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="indicator" id="top2">
+        <text>{{galleryCur}}</text>
+        /
+        <text>{{gallery.length}}</text>
       </view>
     </view>
+    <!-- 商品信息－价格 -->
+    <view class="product-info-product-price">
+      <view class="goods-price">
+        <view class="price current-price">
+          4299
+        </view>
+      </view>
 
-  </view>
-  <!-- 活动横幅 -->
-  <view hidden class="coupon-active">
-    <view class="left">
-      <view class="cite">
-        预计得430米金
+    </view>
+    <!-- 活动横幅 -->
+    <view class="coupon-active">
+      <view class="left">
+        <view class="cite">
+          预计得430米金
+        </view>
+      </view>
+      <view class="btn">
+        查看
+      </view>
+
+    </view>
+    <!-- 商品信息－商品名 -->
+    <view class="product-info-product-name">
+      <view class="product-name">
+        Xiaomi 13
       </view>
     </view>
-    <view class="btn">
-      查看
-    </view>
-
-  </view>
-  <!-- 商品信息－商品名 -->
-  <view hidden class="product-info-product-name">
-    <view class="product-name">
-      Xiaomi 13
-    </view>
-  </view>
-  <!-- 商品信息 - 商品描述 -->
-  <view hidden class="product-info-product-desc">
-    <view class="product-brief">
-      「至高优惠300元！至高24期免息；下单抽奖赢好礼」
-    </view>
-    <view class="product-sell-point">
-      <view class="point">【徕卡影像】徕卡专业光学镜头，徕卡原生双画质</view>
-      <view class="point">【性能爆发】第二代骁龙8旗舰处理器，高性能，低功耗</view>
-      <view class="point">【先锋设计】高光金属直立边框，6.36″超窄边屏幕</view>
-    </view>
-  </view>
-  <!-- 商品攻略 -->
-  <view hidden class="product-info-flow">
-    <view class="flow-distribution">
-      <text>Xiaomi 13 丨 购机攻略</text>
-    </view>
-
-  </view>
-  <!-- 商品类型属性 -->
-  <view hidden class="product-info-class-parameters">
-    <view wx:for="{{7}}" wx:key="index" class="classic-param-item">
-      <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f0c04e138bfed2b1ebb589de615236d1.png" mode="scaleToFill" />
-      <view class="item-name">CPU</view>
-      <view class="item-value">第二代骁龙8</view>
-    </view>
-
-  </view>
-  <!-- 排行榜 -->
-  <view hidden class="rank-info">
-    <image class="left" src="/images/rank.png" mode="scaleToFill" />
-    <view class="right">
-      <view class="text">【手机热销榜】第3名</view>
-      <view class="icon icon-go">
+    <!-- 商品信息 - 商品描述 -->
+    <view class="product-info-product-desc">
+      <view class="product-brief">
+        「至高优惠300元！至高24期免息；下单抽奖赢好礼」
+      </view>
+      <view class="product-sell-point">
+        <view class="point">【徕卡影像】徕卡专业光学镜头，徕卡原生双画质</view>
+        <view class="point">【性能爆发】第二代骁龙8旗舰处理器，高性能，低功耗</view>
+        <view class="point">【先锋设计】高光金属直立边框，6.36″超窄边屏幕</view>
       </view>
     </view>
-  </view>
-  <view class="blank-line"></view>
-  <!-- 商品SKU选择信息 -->
-  <view hidden class="product-section-box">
-    <!-- 选择信息 -->
-    <view class="product-section-item">
-      <view class="left">已选</view>
+    <!-- 商品攻略 -->
+    <view class="product-info-flow">
+      <view class="flow-distribution">
+        <text>Xiaomi 13 丨 购机攻略</text>
+      </view>
+
+    </view>
+    <!-- 商品类型属性 -->
+    <view class="product-info-class-parameters">
+      <view wx:for="{{7}}" wx:key="index" class="classic-param-item">
+        <image lazy-load src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f0c04e138bfed2b1ebb589de615236d1.png" mode="scaleToFill" />
+        <view class="item-name">CPU</view>
+        <view class="item-value">第二代骁龙8</view>
+      </view>
+
+    </view>
+    <!-- 排行榜 -->
+    <view class="rank-info">
+      <image class="left" src="/images/rank.png" mode="scaleToFill" />
+      <view class="right">
+        <view class="text">【手机热销榜】第3名</view>
+        <view class="icon icon-go">
+        </view>
+      </view>
+    </view>
+    <view class="blank-line"></view>
+    <!-- 商品SKU选择信息 -->
+    <view class="product-section-box">
+      <!-- 选择信息 -->
+      <view class="product-section-item">
+        <view class="left">已选</view>
+        <view class="content">
+          <view>
+            <text class="pro-name">Xiaomi 13 12GB+256GB 黑色</text>
+            <text class="pro-num"> x 1</text>
+          </view>
+        </view>
+        <view class="right icon-go"></view>
+      </view>
+      <!-- 配送信息 -->
+      <view class="product-section-item">
+        <view class="left">送至</view>
+        <view class="content send-to">
+          <view class="info">
+            <view class="icon icon-location"></view>
+            <view class="area">北京市 东城区</view>
+            <view class="on"> 有现货</view>
+          </view>
+          <view class="information">
+            今天23点前付款，预计8月26日送达</view>
+
+        </view>
+        <view class="right icon-go"></view>
+      </view>
+      <!-- 服务政策信息 -->
+      <view class="product-section-item">
+        <view class="content service-policy-list">
+          <view class="service-policy">
+            <view class="icon icon-checked"></view>
+            <view class="text">小米自营</view>
+          </view>
+          <view class="service-policy">
+            <view class="icon icon-checked"></view>
+            <view class="text">小米发货</view>
+          </view>
+          <view class="service-policy">
+            <view class="icon icon-checked"></view>
+            <view class="text">7天无理由退货（到店自取拆封后不支持）</view>
+          </view>
+        </view>
+        <view class="right icon-go"></view>
+      </view>
+    </view>
+    <view class="blank-line"></view>
+    <!-- 商品推荐 商户自定 -->
+    <view class="product-info-package">
+      <view class="header">
+        推荐套餐
+      </view>
       <view class="content">
-        <view>
-          <text class="pro-name">Xiaomi 13 12GB+256GB 黑色</text>
-          <text class="pro-num"> x 1</text>
-        </view>
-      </view>
-      <view class="right icon-go"></view>
-    </view>
-    <!-- 配送信息 -->
-    <view class="product-section-item">
-      <view class="left">送至</view>
-      <view class="content send-to">
-        <view class="info">
-          <view class="icon icon-location"></view>
-          <view class="area">北京市 东城区</view>
-          <view class="on"> 有现货</view>
-        </view>
-        <view class="information">
-          今天23点前付款，预计8月26日送达</view>
-
-      </view>
-      <view class="right icon-go"></view>
-    </view>
-    <!-- 服务政策信息 -->
-    <view class="product-section-item">
-      <view class="content service-policy-list">
-        <view class="service-policy">
-          <view class="icon icon-checked"></view>
-          <view class="text">小米自营</view>
-        </view>
-        <view class="service-policy">
-          <view class="icon icon-checked"></view>
-          <view class="text">小米发货</view>
-        </view>
-        <view class="service-policy">
-          <view class="icon icon-checked"></view>
-          <view class="text">7天无理由退货（到店自取拆封后不支持）</view>
-        </view>
-      </view>
-      <view class="right icon-go"></view>
-    </view>
-  </view>
-  <view class="blank-line"></view>
-  <!-- 商品推荐 商户自定 -->
-  <view hidden class="product-info-package">
-    <view class="header">
-      推荐套餐
-    </view>
-    <view class="content">
-      <view class="product-package-maim checked">
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
-        <view class="product-content">
-          <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
-          <view class="product-price">4299</view>
-          <view class="product-price old">123
+        <view class="product-package-maim checked">
+          <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
+          <view class="product-content">
+            <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
+            <view class="product-price">4299</view>
+            <view class="product-price old">123
+            </view>
           </view>
+          <view class="checked-img icon-good-checked"></view>
         </view>
-        <view class="checked-img icon-good-checked"></view>
-      </view>
-      <view class="add-icon">
-        <view class="icon icon-plus"></view>
-      </view>
-      <view class="product-package-maim checked">
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
-        <view class="product-content">
-          <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
-          <view class="product-price">4299</view>
-          <view class="product-price old">123
+        <view class="add-icon">
+          <view class="icon icon-plus"></view>
+        </view>
+        <view class="product-package-maim checked">
+          <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
+          <view class="product-content">
+            <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
+            <view class="product-price">4299</view>
+            <view class="product-price old">123
+            </view>
           </view>
+          <view class="checked-img icon-good-checked"></view>
         </view>
-        <view class="checked-img icon-good-checked"></view>
-      </view>
-      <view class="add-icon">
-        <view class="icon icon-plus"></view>
-      </view>
-      <view class="product-package-maim checked">
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
-        <view class="product-content">
-          <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
-          <view class="product-price">4299</view>
-          <view class="product-price old">123
+        <view class="add-icon">
+          <view class="icon icon-plus"></view>
+        </view>
+        <view class="product-package-maim checked">
+          <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
+          <view class="product-content">
+            <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
+            <view class="product-price">4299</view>
+            <view class="product-price old">123
+            </view>
           </view>
+          <view class="checked-img icon-good-checked"></view>
         </view>
-        <view class="checked-img icon-good-checked"></view>
-      </view>
-      <view class="add-icon">
-        <view class="icon icon-plus"></view>
-      </view>
-      <view class="product-package-maim checked">
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
-        <view class="product-content">
-          <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
-          <view class="product-price">4299</view>
-          <view class="product-price old">123
+        <view class="add-icon">
+          <view class="icon icon-plus"></view>
+        </view>
+        <view class="product-package-maim checked">
+          <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202211292354_3561d2993d555486f6504a7c37b62439.png" mode="widthFix" />
+          <view class="product-content">
+            <view class="product-name">Xiaomi 13 12GB+256GB 黑色</view>
+            <view class="product-price">4299</view>
+            <view class="product-price old">123
+            </view>
           </view>
+          <view class="checked-img icon-good-checked"></view>
         </view>
-        <view class="checked-img icon-good-checked"></view>
       </view>
-    </view>
-    <view class="detail">
-      <view>总价</view>
-      <view class="price-pre price">4498</view>
-      <view class=" price price-pre sub old ">333</view>
-      <view class="price sub">节省<text class="price-pre">50</text></view>
-    </view>
-    <view class="btn">购买此套餐（4件商品）</view>
-  </view>
-  <!-- 用户评价 -->
-  <view hidden class="comments-gallery">
-    <view class="flex-box comments-title">
-      <view class="left">用户评价</view>
-      <view class="right">好评率99.9%
-        <text class="icon-go"></text>
+      <view class="detail">
+        <view>总价</view>
+        <view class="price-pre price">4498</view>
+        <view class=" price price-pre sub old ">333</view>
+        <view class="price sub">节省<text class="price-pre">50</text></view>
       </view>
+      <view class="btn">购买此套餐（4件商品）</view>
     </view>
-    <view class="comments-tags">
-      <view wx:for="{{6}}" wx:key="index" class="comments-tag">
-        价格实惠
+    <!-- 用户评价 -->
+    <view id="comment" class="comments-gallery">
+      <view class="flex-box comments-title">
+        <view class="left">用户评价</view>
+        <view class="right">好评率99.9%
+          <text class="icon-go"></text>
+        </view>
       </view>
-    </view>
-    <view class="comments-view">
-      <view class="comment-box" wx:key="index" wx:for="{{5}}">
-        <view class="comment-header">
-          <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/2d2776dc-4ae4-4c34-a9e0-f63954dcf069.jpg" mode="scaleToFill" />
-          <view class="user-info">
-            <view class="name">丶老猫</view>
-            <view class="comment-date">2023-08-25
+      <view class="comments-tags">
+        <view wx:for="{{6}}" wx:key="index" class="comments-tag">
+          价格实惠
+        </view>
+      </view>
+      <view class="comments-view">
+        <view class="comment-box" wx:key="index" wx:for="{{5}}">
+          <view class="comment-header">
+            <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/2d2776dc-4ae4-4c34-a9e0-f63954dcf069.jpg" mode="scaleToFill" />
+            <view class="user-info">
+              <view class="name">丶老猫</view>
+              <view class="comment-date">2023-08-25
+              </view>
+            </view>
+          </view>
+          <view class="comment-content">
+            <view class="comment-text">下单两天就送到了，给媳妇买的，大小正合适，13这次外观设计深得我心，好评好..1233232123213213213123211232131232131313.</view>
+            <view class="comment-photos">
+              <image wx:key="index" wx:for="{{5}}" src="https://i1.mifile.cn/a2/1692938151_5839586_s1500_2000wh.jpg" mode="scaleToFill" />
             </view>
           </view>
         </view>
-        <view class="comment-content">
-          <view class="comment-text">下单两天就送到了，给媳妇买的，大小正合适，13这次外观设计深得我心，好评好..1233232123213213213123211232131232131313.</view>
-          <view class="comment-photos">
-            <image wx:key="index" wx:for="{{5}}" src="https://i1.mifile.cn/a2/1692938151_5839586_s1500_2000wh.jpg" mode="scaleToFill" />
-          </view>
-        </view>
       </view>
     </view>
-  </view>
-  <view class="blank-line">
-  </view>
-  <!-- 点评 -->
-  <view hidden class="product-info-content">
-    <view class="flex-box header">
-      <view class="left">米粉点评团</view>
-      <view class="right icon-go"></view>
+    <view class="blank-line">
     </view>
-    <view class="content">
-      <view wx:for="{{5}}" wx:key="index" class="box">
-        <view class="image-box">
-          <image class="image-blur" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a66ed665000066caa7cddb01f110208.jpg?w=160&h=90" mode="scaleToFill" />
-          <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a66ed665000066caa7cddb01f110208.jpg?w=160&h=90" mode="aspectFit" />
-        </view>
-        <view class="article-text">
-          从学生小白到摄影大叔，和小米相识12年了
-        </view>
-        <view class="article-addition">
-          <view class="article-author">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/b8e89c9b-e666-4994-9c09-b49f74518e79.jpg?thumb=150x150" mode="scaleToFill" class="avatar" />
-            <view class="name">揭阳大雨</view>
+    <!-- 点评 -->
+    <view class="product-info-content">
+      <view class="flex-box header">
+        <view class="left">米粉点评团</view>
+        <view class="right icon-go"></view>
+      </view>
+      <view class="content">
+        <view wx:for="{{5}}" wx:key="index" class="box">
+          <view class="image-box">
+            <image lazy-load class="image-blur" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a66ed665000066caa7cddb01f110208.jpg?w=160&h=90" mode="scaleToFill" />
+            <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5a66ed665000066caa7cddb01f110208.jpg?w=160&h=90" mode="aspectFit" />
           </view>
-          <view class="article-info">
-            <text class="icon-view icon"></text>
-            6203
+          <view class="article-text">
+            从学生小白到摄影大叔，和小米相识12年了
           </view>
+          <view class="article-addition">
+            <view class="article-author">
+              <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/b8e89c9b-e666-4994-9c09-b49f74518e79.jpg?thumb=150x150" mode="scaleToFill" class="avatar" />
+              <view class="name">揭阳大雨</view>
+            </view>
+            <view class="article-info">
+              <text class="icon-view icon"></text>
+              6203
+            </view>
 
+          </view>
         </view>
       </view>
-    </view>
 
-  </view>
-  <!-- 广告轮播图 -->
-  <swiper hidden class="ad-swiper" indicator-dots autoplay indicator-color="#00000033" indicator-active-color="#fff" circular>
-    <block wx:for="{{3}}" wx:key="index">
-      <swiper-item>
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cfb277e364972213b24ade43e56807f1.png" mode="scaleToFill" />
-      </swiper-item>
-    </block>
-  </swiper>
-  <!-- 商品推荐 -->
-  <view hidden class="product-info-rank">
-    <view class="tab-header">
-      <view class="tab-i active">
-        商品推荐
-      </view>
     </view>
-    <swiper indicator-dots indicator-color="#00000033" indicator-active-color="#00000077" circular>
+    <!-- 广告轮播图 -->
+    <swiper class="ad-swiper" indicator-dots autoplay indicator-color="#00000033" indicator-active-color="#fff" circular>
       <block wx:for="{{3}}" wx:key="index">
         <swiper-item>
-          <view wx:for="{{5}}" wx:key="index" class="shop">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202308122142_7e259a200b6aaec5a2c0445a665e38c3.png?w=800&h=800" mode="scaleToFill" />
+          <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cfb277e364972213b24ade43e56807f1.png" mode="scaleToFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 商品推荐 -->
+    <view class="product-info-rank">
+      <view class="tab-header">
+        <view class="tab-i active">
+          商品推荐
+        </view>
+      </view>
+      <swiper indicator-dots indicator-color="#00000033" indicator-active-color="#00000077" circular>
+        <block wx:for="{{3}}" wx:key="index">
+          <swiper-item>
+            <view wx:for="{{5}}" wx:key="index" class="shop">
+              <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202308122142_7e259a200b6aaec5a2c0445a665e38c3.png?w=800&h=800" mode="scaleToFill" />
+              <view class="name">
+                Redmi K60 至尊版
+              </view>
+              <view class="price-info">
+
+                <text class="price">￥2599</text>
+                <text>起</text>
+                <text class="old-price">￥222</text>
+              </view>
+            </view>
+
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 商品介绍 -->
+    <view id="information" class="product-description">
+      <view class="tab-header">
+        <view data-index="0" bind:tap="changeProductDescriptionCur" class="tab-i {{productDescriptionActive==0?'active':''}}">
+          商品介绍
+        </view>
+        <view data-index="1" bind:tap="changeProductDescriptionCur" class="tab-i {{productDescriptionActive==1?'active':''}}">
+          规格参数
+        </view>
+      </view>
+      <view class="tab-body">
+        <!-- 商品介绍 -->
+        <block wx:if="{{productDescriptionActive==0}}">
+          <image lazy-load wx:key="index" wx:for="{{3}}" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ed067b43c5bad66dcc0b97b43855cebc.jpg?w=1080&h=1098&bg=FFFFFF" mode="widthFix" />
+        </block>
+        <!-- 规格参数 -->
+        <block wx:else>
+          <image lazy-load wx:key="index" wx:for="{{3}}" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5546825c8342bb5864e1b70dd2f618af.jpg?w=1080&h=1486&bg=FFFFFF" mode="widthFix" />
+        </block>
+      </view>
+    </view>
+    <!-- 商品推荐2 -->
+    <view id="recommend" class="product-info-recommend">
+      <view class="header">
+        商品推荐
+      </view>
+      <view class="content">
+        <view wx:for="{{5}}" wx:key="index" class="shop">
+          <image lazy-load src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202308122142_7e259a200b6aaec5a2c0445a665e38c3.png?w=800&h=800" mode="aspectFit" />
+          <view class="good-info">
             <view class="name">
               Redmi K60 至尊版
             </view>
             <view class="price-info">
-
-              <text class="price">￥2599</text>
-              <text>起</text>
-              <text class="old-price">￥222</text>
+              <text class="price">2599</text>
+              <text class="old-price">222</text>
             </view>
           </view>
-
-        </swiper-item>
-      </block>
-    </swiper>
-  </view>
-  <!-- 商品介绍 -->
-  <view hidden class="product-description">
-    <view class="tab-header">
-      <view data-index="0" bind:tap="changeProductDescriptionCur" class="tab-i {{productDescriptionActive==0?'active':''}}">
-        商品介绍
-      </view>
-      <view data-index="1" bind:tap="changeProductDescriptionCur" class="tab-i {{productDescriptionActive==1?'active':''}}">
-        规格参数
+        </view>
       </view>
     </view>
-    <view class="tab-body">
-      <!-- 商品介绍 -->
-      <block wx:if="{{productDescriptionActive==0}}">
-        <image lazy-load wx:key="index" wx:for="{{3}}" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ed067b43c5bad66dcc0b97b43855cebc.jpg?w=1080&h=1098&bg=FFFFFF" mode="widthFix" />
-      </block>
-      <!-- 规格参数 -->
-      <block wx:else>
-        <image lazy-load wx:key="index" wx:for="{{3}}" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5546825c8342bb5864e1b70dd2f618af.jpg?w=1080&h=1486&bg=FFFFFF" mode="widthFix" />
-      </block>
-    </view>
-  </view>
-  <!-- 商品推荐2 -->
-  <view class="product-info-recommend">
-    <view class="header">
-      商品推荐
-    </view>
-    <view class="content">
-      <view wx:for="{{5}}" wx:key="index" class="shop">
-        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202308122142_7e259a200b6aaec5a2c0445a665e38c3.png?w=800&h=800" mode="aspectFit" />
-        <view class="good-info">
-          <view class="name">
-            Redmi K60 至尊版
+    <!-- 底部操作按钮 -->
+    <view class="footer">
+      <view class="bottom-actions">
+        <view class="left">
+          <view class="action">
+            <image src="/images/shop/home.png" mode="scaleToFill" class="icon" />
+            <view>首页</view>
           </view>
-          <view class="price-info">
-            <text class="price">2599</text>
-            <text class="old-price">222</text>
+          <view class="action">
+            <image src="/images/shop/service.png" mode="scaleToFill" class="icon" />
+            <view>客服</view>
+          </view>
+          <view class="action">
+            <image src="/images/shop/cart.png" mode="scaleToFill" class="icon" />
+            <view>购物车</view>
+          </view>
+        </view>
+        <view class="right">
+          <view class="action-btn cart-btn">加入购物车</view>
+          <view class="action-btn buy-btn">立即购买</view>
+        </view>
+      </view>
+    </view>
+    <!-- 置顶fixed -->
+    <view class="toTop {{onTop?'':'show'}}" bind:tap="scrollTo" data-id="top">
+      <image src="/images/shop/topTop.png" mode="widthFix" />
+    </view>
+    <!-- 快速切换fixed -->
+    <view class="navigateTo {{onTop?'':'show'}}">
+      <view class="item {{scrollOn==0?'active':''}}" data-id="top" data-index="0" bind:tap="scrollTo">商品</view>
+      <view class="item {{scrollOn==1?'active':''}}" data-id="comment" data-index="0" bind:tap="scrollTo">评价</view>
+      <view class="item {{scrollOn==2?'active':''}}" data-id="information" data-index="0" bind:tap="scrollTo">详细</view>
+      <view class="item {{scrollOn==3?'active':''}}" data-id="recommend" data-index="0" bind:tap="scrollTo">推荐</view>
+    </view>
+    <!-- 弹窗 -->
+    <view class="mock active">
+      <view class="mock-body">
+        <view class="close"></view>
+        <!-- 商品购买选择 -->
+        <view class="shop-select">
+          <!-- 商品信息 -->
+          <view class="shop">
+            <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212091604_94c6497b70f2e881460cb232082a0da6.png" mode="scaleToFill" />
+            <view class="info">
+              <view class="price">¥4699</view>
+              <view class="name">Xiaomi 13 12GB+512GB 远山蓝</view>
+            </view>
+          </view>
+          <!-- 商品规格 -->
+          <view class="shop-sku">
+            <view class="title">
+            版本</view>
+            <view class="tags-box">
+            <view class="tag">12GB+256GB</view>
+            <view class="tag">12GB+256GB</view>
+            <view class="tag selected">12GB+256GB</view>
+            </view>
+          </view>
+          <!-- 商品属性 -->
+          <view class="shop-class">
+            <view class="title">
+            颜色</view>
+            <view class="tags-box">
+            <view class="tag">黑色</view>
+            <view class="tag">白色</view>
+            <view class="tag selected">青红色</view>
+            </view>
+          </view>
+          <!-- 购买数量 -->
+          <view class="num">
+            <view class="title">购买数量</view>
+            <view class="action-box">
+            <view class="sub disable" bind:tap="subNum">-</view><input class="number" type="number" value="{{buyNum}}" bindinput="changeNum"/>
+            <view class="add" bind:tap="addNum">+</view></view>
+          </view>
+          <!-- 额外服务 -->
+          <view class="other-service">
+          
+          
+          </view>
+          <!-- 操作按钮 -->
+          <view class="bottom-btn">
+            确定
           </view>
         </view>
       </view>
     </view>
   </view>
-  <!-- 底部操作按钮 -->
-  <view class="footer"></view>
 </scroll-view>

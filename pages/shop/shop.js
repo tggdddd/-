@@ -55,22 +55,86 @@ Page({
         "img_url_webp": "",
         "type": "img"
       }
-    ],  //顶部轮播图
-    galleryCur: 1,   //顶部轮播图位置
-    productDescriptionActive: 0//商品描述位置
+    ], //顶部轮播图
+    galleryCur: 1, //顶部轮播图位置
+    productDescriptionActive: 0, //商品描述位置
+    onTop: true, //是否位于顶部
+    scrollOn: 0, // 滑条当前区域 0商品 1评价 2详情 3推荐
+    buyNum: 3//商品购买选择的数量
   },
-   //顶部轮播图位置切换
+  //顶部轮播图位置切换
   changeGalleryCur(e) {
     const cur = e.detail.current
     this.setData({
       galleryCur: cur + 1
     })
   },
-   //商品描述切换
-   changeProductDescriptionCur(e) {
+  // 滑块位置切换
+  scrollTo(e){
+    wx.pageScrollTo({selector:`#${e.currentTarget.dataset.id}`})
+  },
+  //商品描述切换
+  changeProductDescriptionCur(e) {
     const cur = e.currentTarget.dataset.index
     this.setData({
       productDescriptionActive: cur
+    })
+  },
+  // fixed 计算
+  onReady() {
+    this.createIntersectionObserver().relativeToViewport({}).observe("#top2", e => {
+      // 进入
+      if (e.intersectionRatio > 0) {
+        this.setData({
+          onTop: true,
+          scrollOn: 0
+        })
+      } else {
+        this.setData({
+          onTop: false
+        })
+      }
+    })
+    this.createIntersectionObserver().relativeToViewport({}).observe("#recommend", e => {
+
+      if (e.intersectionRatio > 0) {
+        this.setData({
+          scrollOn: 3
+        })
+      }
+    })
+    this.createIntersectionObserver().relativeToViewport({}).observe("#information", e => {
+
+      if (e.intersectionRatio > 0) {
+        this.setData({
+          scrollOn: 2
+        })
+      }
+    })
+    this.createIntersectionObserver().relativeToViewport({}).observe("#comment", e => {
+
+      if (e.intersectionRatio > 0) {
+        this.setData({
+          scrollOn: 1
+        })
+      }
+    })
+  },
+  // 改变商品购买数量
+  changeNum(e){
+    const val = e.detail.value
+    this.setData({
+      buyNum: val
+    })
+  },
+  addNum(){
+    this.setData({
+      buyNum: this.data.buyNum+1
+    })
+  },
+  subNum(){
+    this.setData({
+      buyNum: this.data.buyNum-1
     })
   }
 })
