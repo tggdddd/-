@@ -689,6 +689,7 @@
   padding: 0 16rpx;
   margin: 0 32rpx;
   padding-bottom: 40rpx;
+
   .header {
     padding: 0 16rpx;
     justify-content: space-between;
@@ -762,11 +763,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .article-author {
           width: 50%;
           overflow: hidden;
           flex-shrink: 0;
           display: flex;
+
           image {
             height: 36rpx;
             width: 36rpx;
@@ -776,7 +779,7 @@
           .name {
             white-space: nowrap;
             text-overflow: ellipsis;
-            overflow: hidden; 
+            overflow: hidden;
             padding-left: 16rpx;
           }
         }
@@ -795,5 +798,22 @@
         }
       }
     }
+  }
+}
+
+.ad-swiper {
+  width: 656rpx;
+  height: 182rpx;
+  margin: 0 auto;
+  padding: 0 20rpx;
+  swiper-item{
+    width: 656rpx;
+    height: 182rpx;
+  }
+  image {
+    width: 656rpx;
+    height: 182rpx;
+    margin: 0 auto;
+    border-radius: 16rpx;
   }
 }
