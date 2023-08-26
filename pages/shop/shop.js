@@ -55,13 +55,22 @@ Page({
         "img_url_webp": "",
         "type": "img"
       }
-    ],
-    galleryCur: 1
+    ],  //顶部轮播图
+    galleryCur: 1,   //顶部轮播图位置
+    productDescriptionActive: 0//商品描述位置
   },
+   //顶部轮播图位置切换
   changeGalleryCur(e) {
     const cur = e.detail.current
     this.setData({
       galleryCur: cur + 1
+    })
+  },
+   //商品描述切换
+   changeProductDescriptionCur(e) {
+    const cur = e.currentTarget.dataset.index
+    this.setData({
+      productDescriptionActive: cur
     })
   }
 })

@@ -805,15 +805,265 @@
   width: 656rpx;
   height: 182rpx;
   margin: 0 auto;
-  padding: 0 20rpx;
-  swiper-item{
+  padding: 20rpx;
+
+  swiper-item {
     width: 656rpx;
     height: 182rpx;
   }
+
   image {
     width: 656rpx;
     height: 182rpx;
     margin: 0 auto;
     border-radius: 16rpx;
+  }
+}
+
+.product-info-rank {
+  width: 656rpx;
+  margin: 0 auto;
+
+  .tab-i {
+    font-size: 24rpx;
+    font-weight: 700;
+    width: 100%;
+    color: #000;
+    position: rlative;
+
+    &.active {
+      color: #ff6700;
+
+      ::before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 32rpx;
+        height: 4rpx;
+        color: #ff6700;
+      }
+    }
+  }
+
+  swiper {
+    width: 100%;
+    height: 700rpx;
+
+    swiper-item {
+      flex: 0 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      box-sizing: border-box;
+      align-items: center;
+
+      .shop {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 50%;
+        justify-content: center;
+        margin-right: 13.5rpx;
+        background: #fff;
+        border-radius: 13.5rpx;
+        height: 322rpx;
+        width: 208rpx;
+        box-sizing: border-box;
+        margin-bottom: 16.5rpx;
+        padding: 24rpx;
+
+        image {
+          height: 208rpx;
+          width: 208rpx;
+          align-self: center;
+        }
+
+        .name {
+          flex: 0 0 auto;
+          overflow: hidden;
+          width: 100%;
+          height: 3em;
+          margin-top: 9rpx;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          vertical-align: middle;
+          text-overflow: ellipsis;
+          color: rgba(0, 0, 0, 0.9);
+          font-size: 24rpx;
+          line-height: 1.5em;
+
+          .tag {
+            box-sizing: border-box;
+            font-size: 14rpx;
+            height: 23.5rpx;
+            margin-right: 5rpx;
+            width: fit-content;
+            padding: 0 8rpx;
+            text-align: center;
+            line-height: 23.5rpx;
+            background: #424242;
+            border-radius: 5rpx;
+            color: #ffffffcc;
+          }
+        }
+
+        .tags {
+          height: 23.5rpx;
+          display: flex;
+          margin-top: 6.5rpx;
+
+          .tag {
+            background-color: rgb(255, 255, 255);
+            border-radius: 2rpx;
+            border: 1rpx rgb(255, 89, 0) solid;
+            height: 23.5rpx;
+            margin-right: 5rpx;
+            padding-right: 0 3rpx;
+            box-sizing: border-box;
+            color: rgb(255, 89, 0);
+            font-size: 16.5rpx;
+            line-height: 23.5rpx;
+          }
+        }
+
+        .price-info {
+          height: 31rpx;
+          margin-right: -11rpx;
+          // margin-top: 9rpx;
+          display: flex;
+          align-items: flex-end;
+          vertical-align: bottom;
+          display: table;
+
+          .price {
+            color: #ff6700;
+            font-size: 26.5rpx;
+            font-weight: 500;
+            letter-spacing: 0;
+          }
+
+          text {
+            color: #ff6700;
+            font-size: 16rpx;
+            font-weight: 500;
+            line-height: 25rpx;
+          }
+
+          .old-price {
+            color: rgb(175, 175, 175);
+            font-size: 18.5rpx;
+            margin-bottom: 1rpx;
+            margin-left: 5rpx;
+            text-decoration-line: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-description {
+  .tab-header {
+    .tab-i {
+      font-size: 24rpx;
+      color: #000;
+
+      &.active {
+        color: #ff5934;
+      }
+    }
+  }
+}
+
+.tab-header {
+  display: flex;
+  width: 100%;
+  height: 68rpx;
+  align-items: center;
+
+  .tab-i {
+    flex: 1;
+    text-align: center;
+  }
+
+  .tab-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product-info-recommend {
+
+  .header {
+    line-height: 80rpx;
+    padding: 0 32rpx;
+    font-size: 30rpx;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .shop {
+      flex: 0 1 49.5%;
+
+      image {
+        width: 100%;
+        min-height: 356rpx;
+        height: 356rpx;
+      }
+
+      .good-info {
+        padding: 18rpx 26rpx;
+
+        .name {
+          font-size: 28rpx;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        
+        .price-info {
+          margin-top: 10rpx;
+          display: flex;
+          align-items: flex-end;
+          vertical-align: bottom;
+          display: table;
+
+          .price {
+            color: #ff6700;
+            font-size: 32rpx;;
+            letter-spacing: 0;
+          }
+          .price::before,.old-price::before{
+            content:"\A5";
+            font-size: .76em;display: inline-table;
+            vertical-align: middle;
+          }
+          text {
+            color: #ff6700;
+            font-size: 16rpx;
+            font-weight: 500;
+            line-height: 25rpx;
+          }
+
+          .old-price {
+            color: rgb(175, 175, 175);
+            font-size: 22rpx;
+            margin-bottom: 1rpx;
+            margin-left: 5rpx;
+            text-decoration-line: line-through;
+          }
+        }
+      }
+      
+    }
   }
 }

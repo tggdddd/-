@@ -191,7 +191,7 @@
     <view class="btn">购买此套餐（4件商品）</view>
   </view>
   <!-- 用户评价 -->
-  <view class="comments-gallery">
+  <view hidden class="comments-gallery">
     <view class="flex-box comments-title">
       <view class="left">用户评价</view>
       <view class="right">好评率99.9%
@@ -225,7 +225,7 @@
   <view class="blank-line">
   </view>
   <!-- 点评 -->
-  <view class="product-info-content">
+  <view hidden class="product-info-content">
     <view class="flex-box header">
       <view class="left">米粉点评团</view>
       <view class="right icon-go"></view>
@@ -241,7 +241,7 @@
         </view>
         <view class="article-addition">
           <view class="article-author">
-            <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/b8e89c9b-e666-4994-9c09-b49f74518e79.jpg?thumb=150x150" mode="scaleToFill" class="avatar"/>
+            <image src="https://cdn.cnbj1.fds.api.mi-img.com/user-avatar/b8e89c9b-e666-4994-9c09-b49f74518e79.jpg?thumb=150x150" mode="scaleToFill" class="avatar" />
             <view class="name">揭阳大雨</view>
           </view>
           <view class="article-info">
@@ -255,16 +255,81 @@
 
   </view>
   <!-- 广告轮播图 -->
-  <swiper class="ad-swiper" 	indicator-dots 	indicator-color="#00000033" 	indicator-active-color="#fff"
-  circular>
+  <swiper hidden class="ad-swiper" indicator-dots autoplay indicator-color="#00000033" indicator-active-color="#fff" circular>
     <block wx:for="{{3}}" wx:key="index">
       <swiper-item>
-      <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cfb277e364972213b24ade43e56807f1.png" mode="scaleToFill"/>
+        <image src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cfb277e364972213b24ade43e56807f1.png" mode="scaleToFill" />
       </swiper-item>
     </block>
   </swiper>
+  <!-- 商品推荐 -->
+  <view hidden class="product-info-rank">
+    <view class="tab-header">
+      <view class="tab-i active">
+        商品推荐
+      </view>
+    </view>
+    <swiper indicator-dots indicator-color="#00000033" indicator-active-color="#00000077" circular>
+      <block wx:for="{{3}}" wx:key="index">
+        <swiper-item>
+          <view wx:for="{{5}}" wx:key="index" class="shop">
+            <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202308122142_7e259a200b6aaec5a2c0445a665e38c3.png?w=800&h=800" mode="scaleToFill" />
+            <view class="name">
+              Redmi K60 至尊版
+            </view>
+            <view class="price-info">
+
+              <text class="price">￥2599</text>
+              <text>起</text>
+              <text class="old-price">￥222</text>
+            </view>
+          </view>
+
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
   <!-- 商品介绍 -->
+  <view hidden class="product-description">
+    <view class="tab-header">
+      <view data-index="0" bind:tap="changeProductDescriptionCur" class="tab-i {{productDescriptionActive==0?'active':''}}">
+        商品介绍
+      </view>
+      <view data-index="1" bind:tap="changeProductDescriptionCur" class="tab-i {{productDescriptionActive==1?'active':''}}">
+        规格参数
+      </view>
+    </view>
+    <view class="tab-body">
+      <!-- 商品介绍 -->
+      <block wx:if="{{productDescriptionActive==0}}">
+        <image lazy-load wx:key="index" wx:for="{{3}}" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ed067b43c5bad66dcc0b97b43855cebc.jpg?w=1080&h=1098&bg=FFFFFF" mode="widthFix" />
+      </block>
+      <!-- 规格参数 -->
+      <block wx:else>
+        <image lazy-load wx:key="index" wx:for="{{3}}" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5546825c8342bb5864e1b70dd2f618af.jpg?w=1080&h=1486&bg=FFFFFF" mode="widthFix" />
+      </block>
+    </view>
+  </view>
   <!-- 商品推荐2 -->
+  <view class="product-info-recommend">
+    <view class="header">
+      商品推荐
+    </view>
+    <view class="content">
+      <view wx:for="{{5}}" wx:key="index" class="shop">
+        <image src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202308122142_7e259a200b6aaec5a2c0445a665e38c3.png?w=800&h=800" mode="aspectFit" />
+        <view class="good-info">
+          <view class="name">
+            Redmi K60 至尊版
+          </view>
+          <view class="price-info">
+            <text class="price">2599</text>
+            <text class="old-price">222</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
   <!-- 底部操作按钮 -->
   <view class="footer"></view>
 </scroll-view>
